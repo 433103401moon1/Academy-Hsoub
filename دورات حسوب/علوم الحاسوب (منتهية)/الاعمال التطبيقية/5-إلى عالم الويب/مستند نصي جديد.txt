@@ -1,0 +1,85 @@
+تغيير عنوان الخادم المحلي من داخل جهازك + حظر بعض المواقع
+https://academy.hsoub.com/courses/computer-science/intro-to-web/servers/05-%D8%A7%D9%84%D8%AE%D8%A7%D8%AF%D9%85-%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A-r2591/
+
+
+انشاء خادم محلي + انشاء صفحة تسجيل دخول + حل مشكلة عدم وجود قاعدة بيانات
+https://academy.hsoub.com/courses/computer-science/intro-to-web/servers/06-%D9%87%D9%84-%D9%8A%D9%85%D9%83%D9%86%D9%86%D9%8A-%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%AE%D8%A7%D8%AF%D9%85-r2592/
+
+
+
+07. حل مشكلة الخادم المحلي لا يعمل بسبب المنفذ
+https://academy.hsoub.com/courses/computer-science/intro-to-web/servers/07-%D8%AD%D9%84-%D9%85%D8%B4%D9%83%D9%84%D8%A9-%D8%A7%D9%84%D8%AE%D8%A7%D8%AF%D9%85-%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A-%D9%84%D8%A7-%D9%8A%D8%B9%D9%85%D9%84-%D8%A8%D8%B3%D8%A8%D8%A8-%D8%A7%D9%84%D9%85%D9%86%D9%81%D8%B0-r2593/
+
+
+
+08. حل مشكلة عدم اتصال الخادم المحلي على الشبكة المحلية + تغيير اعدادات جدار الحماية
+https://academy.hsoub.com/courses/computer-science/intro-to-web/servers/08-%D8%AD%D9%84-%D9%85%D8%B4%D9%83%D9%84%D8%A9-%D8%B9%D8%AF%D9%85-%D8%A7%D8%AA%D8%B5%D8%A7%D9%84-%D8%A7%D9%84%D8%AE%D8%A7%D8%AF%D9%85-%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9-r2594/
+
+
+
+09. ما هي ملفات تعريف الارتباط؟
+https://academy.hsoub.com/courses/computer-science/intro-to-web/web-security/09-%D9%85%D8%A7-%D9%87%D9%8A-%D9%85%D9%84%D9%81%D8%A7%D8%AA-%D8%AA%D8%B9%D8%B1%D9%8A%D9%81-%D8%A7%D9%84%D8%A7%D8%B1%D8%AA%D8%A8%D8%A7%D8%B7%D8%9F-r2614/
+
+
+
+10. التخزين في الويب
+https://academy.hsoub.com/courses/computer-science/intro-to-web/web-security/10-%D8%A7%D9%84%D8%AA%D8%AE%D8%B2%D9%8A%D9%86-%D9%81%D9%8A-%D8%A7%D9%84%D9%88%D9%8A%D8%A8-r2615/
+يخزن التابع setItem قيمة في التخزين المحلي في المتصفح:
+localStorage.setItem('key', 'value')
+    ويمكن الوصول للقيمة من خلال الكائن نفسه عبر اسم المفتاح:
+
+localStorage.key
+    وحذف القيمة باستخدام التابع removeItem:
+
+localStorage.removeItem('key')
+    وحذف كل القيم باستخدام التابع clear:
+
+localStroage.clear()
+
+
+
+05. تجريب حقن SQL عمليًا
+موجود ملف العمل في نفس هذا المجلد
+https://academy.hsoub.com/courses/computer-science/intro-to-web/web-security/05-%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8-%D8%AD%D9%82%D9%86-sql-%D8%B9%D9%85%D9%84%D9%8A%D9%8B%D8%A7-r2610/
+
+استعلامات الهجوم المستخدمة في الدرس:
+' UNION SELECT 1,table_name,3,4,5,6 FROM information_schema.tables WHERE table_schema = 'db_member';--
+
+
+' UNION SELECT 1,column_name,3,4,5,6 FROM information_schema. columns WHERE table_schema = 'db_member';--
+
+
+' UNION SELECT 1,column_name,3,4,5,6 FROM information_schema. columns WHERE table_schema = 'member';--
+
+
+' UNION SELECT 1,2,3 admin;--
+
+
+'; DROP TABLE admin;--
+
+
+';INSERT INTO comment VALUES (25, 'hacker', 'hacker');--
+
+
+
+
+07. تجريب هجمات XSS عمليًا
+موجود ملف العمل في نفس هذا المجلد
+https://academy.hsoub.com/courses/computer-science/intro-to-web/web-security/07-%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8-%D9%87%D8%AC%D9%85%D8%A7%D8%AA-xss-%D8%B9%D9%85%D9%84%D9%8A%D9%8B%D8%A7-r2612/
+
+
+
+08. سد الثغرات في التطبيق
+موجود ملف العمل في نفس هذا المجلد
+https://academy.hsoub.com/courses/computer-science/intro-to-web/web-security/08-%D8%B3%D8%AF-%D8%A7%D9%84%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-r2613/
+
+
+08. برنامج يرسل طلبية لجلب مستند
+موجود ملف العمل في نفس هذا المجلد
+https://academy.hsoub.com/courses/computer-science/intro-to-web/request-response/08-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D9%8A%D8%B1%D8%B3%D9%84-%D8%B7%D9%84%D8%A8%D9%8A%D8%A9-%D9%84%D8%AC%D9%84%D8%A8-%D9%85%D8%B3%D8%AA%D9%86%D8%AF-r2600/
+
+
+
+05. تطبيق عملي لإرسال واستقبال بيانات
+موجود ملف العمل في نفس هذا المجلد
+https://academy.hsoub.com/courses/computer-science/intro-to-web/web-data/05-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D8%B9%D9%85%D9%84%D9%8A-%D9%84%D8%A5%D8%B1%D8%B3%D8%A7%D9%84-%D9%88%D8%A7%D8%B3%D8%AA%D9%82%D8%A8%D8%A7%D9%84-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-r2605/

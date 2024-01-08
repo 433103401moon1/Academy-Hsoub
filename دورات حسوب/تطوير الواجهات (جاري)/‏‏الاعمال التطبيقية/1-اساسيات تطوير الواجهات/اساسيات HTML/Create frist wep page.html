@@ -1,0 +1,194 @@
+<!-- هنا سنقوم بالتعريف لاهم وسوم 
+HTML -->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title> First WeP Page </title>
+
+</head>
+<body>
+<P>This is a pargraph</p>
+<b>Thise is a bold text</b>
+<br>
+<u>Thise is an underlined text</u>
+<br>
+<i>Thise is an italic text</i> <!-- النص مائل -->
+<br>
+
+<s>Thise is a strike text</s> <!-- خط في وسط النص -->
+<br>
+<sub>Thise is a superscript text</sub> <!-- ارتفاع النص الى أعلى -->
+<sup>Thise is an subscript text</sup> <!-- نزول النص الى أسفل -->
+<small>Thise is a small text</small>
+<br>
+<hr> <!-- خط فاصل -->
+<!-- لم يتعرف عليه لان هذا الوسم حذف من 
+HTML5-->
+<big>Thise is a big text</big>
+
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p> This is a pargraph
+    <span style="color: rgb(255, 230, 0);  background-color: black;">this is a span</span> <!-- Span فائدته امكانية عمل تخصيص لجزء من النص داخل عنصر معين كما في البراقراف هنا -->
+    <div style="color: rgb(255, 230, 0);  background-color: black;">this is a div</div> <!-- div فائدته امكانية عمل تخصيص لجزء من النص داخل عنصر معين كما في البراقراف هنا ولكن الفرق بينه وبين سبان انه يأخذ مساحة خاصة به ولا يقتصر على النص فقط -->
+</p>
+
+<!-- 10. وسوم النصوص -->
+
+<q>this is a quotation  text</q> <!-- علامة اقتباس لجملة قصيرة-->
+<cite>cite</cite> <!-- يستخدم للاستشهاد-->
+<blockquote> blockquote </blockquote> <!-- اقتباس لجملة طويلة يضع فراع طويل بداية النص-->
+<address>address</address> <!-- لوضع عنوان وتمييزة من النظام انه عنوان-->
+<strong>strong</strong> <!-- لتمييز النص يشبه البولد-->
+<kbd>+</kbd> <!-- اضافة ازرار في الكيبورد وتمييزها من النظام-->
+<mark>mark</mark> <!-- لتمييز النص بالاصفر -->
+<abbr title="title">abbr</abbr> <!-- وضع اختصار واذا وضعت الماوس عليه يظهر النص كاملا-->
+<em>em</em> <!-- لتمييز النص بشكل مختلف-->
+
+<!-- 11. التعامل مع الصور -->
+<img id="img" src="..\اساسيات تطوير الواجهات\اساسيات HTML\IMG_5563.jpg" alt="title"> <!-- alt وظيفته نص بديل للصورة  -->
+
+<!-- 12. القوائم المرتبة -->
+<ol start="3">
+    <li>Task1</li>
+    <li>Task2</li>
+    <li>Task3</li>
+</ol>
+<ol type="i">
+    <li>Task1</li>
+    <li>Task2</li>
+    <li>Task3</li>
+</ol>
+
+
+<!-- 13. القوائم غير المرتبة -->
+<ul type="circle"> <!-- يمكن اضافة للدلالة على عدم وجود اشكال للعناصر type="none" -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<!-- 14. القوائم الوصفية -->
+<dl> 
+<dt>Title:</dt>
+<dd>Wep</dd>
+<dt>Age:</dt>
+<dd>28</dd>
+</dl>
+
+<!-- 15. التعامل مع الجداول -->
+<table border="4">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>jop</th>
+    </tr>
+    <tr>
+        <td>abdurhman</td>
+        <td>30</td>
+        <td>manager</td>
+    </tr>
+    <tr>
+        <td>abdurhman sami</td>
+        <td>30000</td>
+        <td>manager</td>
+    </tr>
+</table>
+
+<!-- 16. هيكلة عناصر الجداول -->
+<table border="4">
+    <caption> عنوان وسط اعلى الجدول</caption>
+    <thead> <!-- تعريف راس الجدول مفيدة للتحكم اكثر في الحدول -->
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>jop</th>
+        </tr>
+    </thead>
+    <tbody> <!-- تعريف جسم الجدول مفيدة للتحكم اكثر في الحدول -->
+        <tr>
+            <td>abdurhman</td>
+            <td>30</td>
+            <td>manager</td>
+        </tr>
+        <tr>
+            <td>abdurhman sami</td>
+            <td>30000</td>
+            <td>manager</td>
+        </tr>
+    </tbody>
+    <tfoot> <!-- تعريف اسفل الجدول مفيدة للتحكم اكثر في الحدول -->
+        <td colspan="3" rowspan="3"> END </td> <!-- colspan عدد الخلايا التي سيتم دمجها في هذه الخلية من الاعمدة
+        rowspan للصفوف و-->
+    </tfoot>
+</table>
+
+<!-- 17. الروابط الفائقة -->
+<a target="_blank" href="https://translate.google.com/">translate google</a>
+<br>
+<a href="..\اساسيات تطوير الواجهات\اساسيات HTML\IMG_5563.jpg">IMG_5563.jpg</a>
+<br>
+<a href="#img">id img</a>
+<br>
+<!-- 19+18. التعامل مع النماذج -->
+<form action="">
+    <table>
+        <tr>
+            <td>
+                <label for="Name">Name:</label> <!--for="Name" تستخدم للربط بين مكان الادخال والعنوان مثلا اذا تم ضغط العنوان سينقلك لحقل الادخال او يضع صح في حال كان هذا النوع -->
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="Name" name="Name"> <!--type="text" هناك عندة انواع لزر الادخال -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Age">Age:</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="Age" name="Age" value="20"> <!--value="20" يمكن ادخال قيمة افتراضية-->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Send">
+            </td>
+            <td>
+                <input type="reset" value="clear">
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+
+<!-- 21. العناصر التقسيمية -->
+<!-- هكذا يتم تقسيم الصفحة وظيفة هذة الاقسام ترتيب العناصر وايضا جعل المتصفحات ومحركات البحث تتعرف عليها  -->
+
+<head></head>
+<nav></nav>
+<article>
+<section></section>
+<aside></aside>
+</article>
+<footer></footer>
+
+
+</html>
+</body>

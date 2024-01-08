@@ -1,0 +1,213 @@
+// // console.log("hello world!");
+// let result = 1 === "1" ? "True" : "False"; // العامل الثلاثي
+// console.log(result);
+// let result2 = 1 === "1" ? "True" : (1 === 1 ? "True" : "False"); // العامل الثلاثي معقد
+// console.log(result2);
+
+// // ----------------------------------------------------------------
+// arr = [10, 11, 12, 13, 14, 15, 16, 17, 18];
+// for (let num in arr) {
+//     console.log(arr[num]); } // تُستخدم حلقة العبور `for...in` للعبور على المصفوفات والكائنات
+//     console.log("----------");
+// for (let num of arr) {
+//     console.log(num); } // تُستخدم حلقة العبور for…of للعبور على الكائنات التي يمكن الدوران على عناصرها مثل المصفوفة أو السلسلة النصية أو كائن يحتوي على أكثر من عنصر، ومن ثم داخل الحلقة يتم تنفيذ تعبير برمجي معين كالطباعة مثلًا وذلك على كل قيمة من قيم الكائن.
+
+// // -------------------12. تمرين: جمع عناصر المصفوفة----------------------------
+// arr = [10, 11, 12, 13, 14, 15, 16, 17, 18];
+// let sum = 0
+// for (var item in arr) {
+//     sum += arr[item]
+// }
+// console.log(sum);
+
+// -------------------13. تمرين: استخراج العناصر النصية من مصفوفة---------------------------
+// arr = [10, 11, "12", 13, 14, "15", 16, 17, "18"];
+// let arr_string = []
+// for (let item in arr) {
+//     typeof arr[item] == "string" ? arr_string.push(arr[item]) : false;
+// }
+// console.log(arr_string);
+
+// // -------------------14. تمرين: طباعة نجوم--------------------------
+// let num_stars = prompt("Please enter number stars");
+// for (let i = 0 ; i < num_stars ; i++) {
+//     let stars = '';
+//     for (let j = 0; j < i ; j++) {
+//         stars+= '*';
+//     }
+//     console.log(stars);
+// }
+
+// // -------------------05. القيم أو الوسائط arguments  ++  06. المعامل rest-------------------------
+// function sum_arguments(){
+//     let sum = 0;
+//     for (let i of arguments) { sum += i; } // arguments هي جميع القيم الممررة للدالة
+//     console.log(sum); }
+// sum_arguments(1,2,3);
+
+// function sum_rest(a, ...aa){
+//     let sum = 0;
+//     for (let i of aa) { sum += i; } // rest هي جميع القيم الممررة للدالة ايضا لكن يمكن اضافة معاملات للدالة مع هذا المعامل وتسميته باسم خاص فهو افضل من السابق
+//     console.log(sum + a); }
+// sum_rest(1,1,2,3);
+
+// // -------------------09. التصريح Declaration والتعبير Expressions عن الدوال-------------------------
+// // التصريح Declaration
+// Declaration()
+// function Declaration(){
+//     console.log("hello");
+// }
+// // التعبير Expressions
+// hello()
+// let hello = function (){
+//     console.log("hello");
+// }
+
+// // -------------------11. تمرين: الأعداد الأولية-------------------------
+// function isPrime(num){
+//     for (let i = 2 ; i < num ; i++)
+//         if (num % i === 0) return false;
+//     return num > 1
+// }
+// function Primes(max){
+//     for (let i = 2 ; i < max ; i++)
+//         if (isPrime(i)) console.log(i);
+// }
+// let num = prompt("Please enter number: ");
+// Primes(num);
+
+// // -------------------12. التعاود Recursion------------------------
+// function factorial(num){
+//     if (!(num <= 0)) return num * factorial(num-1);
+//     else return 1;
+//     }
+// console.log(factorial(3));
+
+
+// -------------------المصفوفات > 01. إضافة عنصر للمصفوفة-----------------------
+// let arr = [1,2,3,4,5];
+// arr[arr.length] = "length";
+// arr.push("shift1", "shift2");
+// arr.unshift("unshift1", "unshift2"); // اول المصفوفة
+// arr.splice(3, 0, "splice1", "splice2" );
+// console.log(arr);
+
+// -------------------المصفوفات > 02. حذف عنصر من مصفوفة-----------------------
+// let arr = [1,2,3,4,5];
+// arr.pop(); // حذف اخر عنصر
+// arr.shift(); // حذف اول عنصر
+// arr.splice(1,2); // حذف عدد من العناصر وتحديد مكان بداية الحذف
+// console.log(arr);
+
+// // -------------------المصفوفات > 03. إفراغ المصفوفة-----------------------
+// let arr1 = [1,2,3,4,5];
+// let x = arr1
+// arr1 = []; // الافراغ بالاسناد مشكلنها لو كان هناك متغير اخذ قيمتها مسبفا فلن تقوم بالافراغ فيه ايضا
+// console.log(x);
+// // -----------
+// let arr2 = [1,2,3,4,5];
+// x = arr2
+// arr2.length = 0; // الافراغ هكذا يفرغها حتى مع المتغيرات التي اخذت قيمتها مسبقا  
+// console.log(x);
+
+// // -------------------04. تمرين: عكس المصفوفات----------------------
+// // let arr = [1,2,3,4,5];
+// // for (let i in arr) {
+// //     arr.splice(i, 0, arr[arr.length-1]);
+// //     arr.pop();
+// // }
+// // console.log(arr);
+
+// let arr = [1,2,3,4,5];
+// for (let i in arr) {
+//     arr.splice(i, 0, arr.pop());
+// }
+// console.log(arr);
+
+// // -------------------05. التوابع في المصفوفات---------------------
+// let arr = [1,2,3,4,5];
+// console.log(arr.includes(22));
+// console.log(arr.indexOf(3));
+// console.log(arr.find(function(num){ return num > 3 })); // تبحث الدالة `find` عن أول عنصر يحقق شرط محدد، وذلك بتمرير دالة تأخذ قيمة العنصر كمعامل لها، وتعيد قيمة منطقية تعبر عن مطابقة العنصر ذلك لشرط البحث أم لا.
+// console.log(arr.findIndex(function(num){ return num > 3 })) // تبحث الدالة `findIndex` عن أول عنصر ضمن المصفوفة يحقق شرطًا معينًا، وتعيد رقم الخانة له، وفي حال لم يحقق أي عنصر الشرط ستعيد القيمة `-1`.
+// console.log(arr.filter(function(num){ return num > 3 })) // تُصفي الدالة `filter` كافة العناصر التي تحقق شرطًا معينًا، وتعيد مصفوفة تحوي كل تلك العناصر.
+
+// -------------------06. الدوال السهمية--------------------
+// // سنحول هذة الدالة لدالة سهمية
+// let x1 = function(a) { return a };
+// // بعد التحويل
+// let x2 = (a) => { return a };
+// // يمكن الاستغناء عن الاقواس ان كان هناك معامل واحد فقط
+// let x3 = a => { return a };
+// // يمكن الاستغناء عن الاقواس المجعدة وكلمة الارجاع ايضا لنصل لفائدة الدوال السهمية وهي البساطة
+// let x4 = a => a ;
+
+// // -------------------07. العبور على عناصر المصفوفة-------------------
+// let arr = [1,2,3,4,5];
+// arr.forEach((value, index) => console.log(value, index)) // تستدعي الدالة `forEach` دالةً لكل عنصر من عناصر المصفوفة.
+
+// // -------------------08. ترتيب عناصر المصفوفات------------------
+// let arr = [3,2,3,4,5];
+// console.log(arr.sort( (a, b) => b -a)); // ثقوم الدالة بترتيب العناصر وعندما اردنا الترتيب بالعكس اضفنا داله سهمية بحث حرف اي يدل على الرقم الاول و حرف بي على الرقم الثاني وناتج الطرح على اساسه ينم الترتيب
+
+// // ------------------- 02. الكائنات في JavaScript  ++  03. التوابع في الكائنات-----------------------
+// let Customer = {
+//     name : "abdurhman",
+//     age : 28,
+//     salary : 3000,
+
+//     how_salary : function () {
+//         console.log("the salary is " + this.salary) }
+// };
+// Customer.how_salary();
+
+// // ------------------- 04. التابع الباني Constructor----------------------
+// function Customer (name, age, salary) {
+//     this.name = name;
+//     this.age = age;
+//     this.salary = salary;
+
+//     this.how_salary = function () {
+//         console.log("the salary is " + this.salary) }
+// };
+// cus1 = new Customer("abdurhman", 28, 3000);
+// cus1.how_salary();
+
+// // -------------------01. كائن التاريخ Date----------------------
+// let myDate = new Date(); // date now
+// console.log(myDate);
+// let myDate_string = new Date("2023-01-12 12:20:10"); // date selected by string
+// console.log(myDate_string);
+// let myDate_element = new Date(2023,0,12,12,20,10); // date selected by element
+// console.log(myDate_element);
+// let myDate_yeer = new Date().getFullYear(); // هناك توابع كثيرة مثل هذه يمكن استخراج السنة فقط وغيرها
+// console.log(myDate_yeer);
+// let myDate_time = new Date().getTime(); // هذا التابع مهم جدا فهو يحدد التاريخ كاملا بالثواني نستطيع استخدامه للمقارنة بين تاريخين بشكل دقيق جدا او حساب مدة التنفيذ مثلا     
+// console.log(myDate_time);
+// // مثلا نقارن بين تاريخين
+// if (myDate_string.getTime() === myDate_element.getTime()) 
+//     console.log("true"); 
+// else console.log("false");
+
+// // -------------------02. التعابير النظامية Regular Expression----------------------
+// let text = "hello , my name is Abdurhman sami , i am live in saudi , my age is 28";
+// let regex1 = /name is ([a-zA-Z]+)/; // نستطيع التحكم في عدة امور مثل الاحرف والارقام وعددها ونوعها وغيرها , الزائد يعني انه يمكن ان يتكون من اكثر من خانه
+// console.log(regex1.test(text));
+// console.log(regex1.exec(text));
+// let regex2 = /age is ([0-9]+)/;
+// console.log(regex2.test(text));
+
+// -------------------03. العبارة try...catch----------------------
+try { // هنا الكود
+    let myDate = new Date();
+    console.log(myDate);
+    let myDate_string = new Date("2023-01-12 12:20:10"); 
+    console.log(myDate_string1);
+    // كما يمكننا منع 
+} 
+catch (error) { // هنا التعامل مع الكود في حال وجود خطا
+    console.log("Oh, there is an error in the code\n" , error);
+} 
+finally { // هنا كود ينفذ دائما بعد الانتهاء من الكود كاملا وهي ليست الزامية
+    console.log("this is finally");
+}

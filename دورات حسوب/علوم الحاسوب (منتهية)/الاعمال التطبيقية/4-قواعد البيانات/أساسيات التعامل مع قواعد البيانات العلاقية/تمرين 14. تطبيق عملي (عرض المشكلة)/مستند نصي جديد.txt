@@ -1,0 +1,5 @@
+problem 1
+SELECT FirstName,LastName,age FROM Students WHERE FirstName like "m%" ORDER BY age DESC;
+
+problem 2
+UPDATE Students SET LastName = "hasan" , age = 13, class = "eight" WHERE FirstName = "ola";

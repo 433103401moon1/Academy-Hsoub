@@ -1,0 +1,16 @@
+problem 1
+SELECT ConsumerName,Name,count(Name) AS "Number" FROM Market
+WHERE Year = 2020
+GROUP BY ConsumerName,Name
+
+
+problem 2-1
+SELECT Name, Color, min(Price) AS "Price" FROM Market
+WHERE Year = 2020
+GROUP BY Name
+
+
+problem 2-2
+SELECT Name, Color, max(Price) AS "Price" FROM Market
+WHERE Year = 2020
+GROUP BY Name
