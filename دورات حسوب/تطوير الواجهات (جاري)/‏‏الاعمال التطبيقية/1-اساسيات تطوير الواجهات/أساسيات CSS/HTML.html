@@ -1,0 +1,239 @@
+<!-- هنا سنقوم بالتعريف لاهم وسوم 
+HTML -->
+
+<!DOCTYPE HTML>
+<html dir="ltr">  <!-- تحديد اتجاه الصفحة -->
+
+<head>
+
+    <title> First WeP Page </title>
+    <!-- https://fontawesome.com/search?o=r&m=free من افضل المواقع التي تقدم ايقونات مجانية -->
+    <!-- https://cdnjs.com/libraries/font-awesome تم جلب الرابط من هذا الموقع -->
+    <!-- يمكن تضمين الايقونات كرابط او تحميلها محليا في ملف -->
+    <!--استدعاء مكتبة الايقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="whatsapp.png"> <!--ايقونه الصفحة في الاعلى-->
+    <!-- الطريقة1 لوضع التنسيقات في الصفحة يجب ان تكون في الهيدر حتى تحمل قبل البودي-->
+    <style>
+        h1 {
+            color: brown;
+        }
+    </style>
+    <!--الطريقة2 لوضع التنسيقات في الصفحة-->
+    <!--ملاجطة مهمه تستطيع التعامل مع هذه الايقونات مثل اي نص عتدي من تغيير اللون والحجم الخ لانها فعليا عبارة عن نصوص-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--ايقونه بيت من مكتبة الايقونات-->
+    <i class="fa-solid fa-house"></i>
+    <!--الطريقة3 لوضع التنسيقات في الصفحة-->
+    <P style="color:yellow; background-color: blue;">This is a pargraph</p>
+    <div class="background">
+        background
+    </div>
+
+    <div class="MarginAndPadding">margin And Padding</div>
+
+
+    <p id="cairo"> السلام عليكم</p>
+
+    <div id="div">
+        <div class="class"></div>
+        <div class="class"></div>
+        <div class="class"></div>
+    </div>
+
+    <div id="flex">
+        <div class="flex">1</div>
+        <div class="flex">2</div>
+        <div class="flex">3</div>
+    </div>
+    <div id="b-float">Thise is a bold text</div>
+    <nav>
+        <ul type="circle"> 
+            <li>home</li>
+            <li>contce</li>
+        </ul>
+    </nav>
+    <b>Thise is a bold text11111</b>
+    <br>
+   
+
+    <u>Thise is an underlined text</u>
+    <br>
+    <i>Thise is an italic text</i> <!-- النص مائل -->
+    <br>
+
+    <s>Thise is a strike text</s> <!-- خط في وسط النص -->
+    <br>
+    <sub>Thise is a superscript text</sub> <!-- ارتفاع النص الى أعلى -->
+    <sup>Thise is an subscript text</sup> <!-- نزول النص الى أسفل -->
+    <small>Thise is a small text</small>
+    <br>
+    <hr> <!-- خط فاصل -->
+    <!-- لم يتعرف عليه لان هذا الوسم حذف من 
+HTML5-->
+    <big>Thise is a big text</big>
+    <div>
+        <h1>H1</h1>
+        <h2>hg</h2>
+        <h3 class="h3-1">H3</h3>
+        <h4 id="h4-1">H4</h4>
+    </div>
+
+    <h5>H5</h5>
+    <h6>H6</h6>
+    <p> This is a pargraph
+        <span style="color: rgb(255, 230, 0);  background-color: black;">this is a span</span>
+        <!-- Span فائدته امكانية عمل تخصيص لجزء من النص داخل عنصر معين كما في البراقراف هنا -->
+    <div style="color: rgb(255, 230, 0);  background-color: black;">this is a div</div>
+    <!-- div فائدته امكانية عمل تخصيص لجزء من النص داخل عنصر معين كما في البراقراف هنا ولكن الفرق بينه وبين سبان انه يأخذ مساحة خاصة به ولا يقتصر على النص فقط -->
+    </p>
+
+    <!-- 10. وسوم النصوص -->
+
+    <q>this is a quotation text</q> <!-- علامة اقتباس لجملة قصيرة-->
+    <cite>cite</cite> <!-- يستخدم للاستشهاد-->
+    <blockquote> blockquote </blockquote> <!-- اقتباس لجملة طويلة يضع فراع طويل بداية النص-->
+    <address>address</address> <!-- لوضع عنوان وتمييزة من النظام انه عنوان-->
+    <strong>strong</strong> <!-- لتمييز النص يشبه البولد-->
+    <kbd>+</kbd> <!-- اضافة ازرار في الكيبورد وتمييزها من النظام-->
+    <mark>mark</mark> <!-- لتمييز النص بالاصفر -->
+    <abbr title="title">abbr</abbr> <!-- وضع اختصار واذا وضعت الماوس عليه يظهر النص كاملا-->
+    <em>em</em> <!-- لتمييز النص بشكل مختلف-->
+
+    <!-- 11. التعامل مع الصور -->
+    <img id="img" src="..\اساسيات تطوير الواجهات\اساسيات HTML\IMG_5563.jpg" alt="title">
+    <!-- alt وظيفته نص بديل للصورة  -->
+
+    <!-- 12. القوائم المرتبة -->
+    <ol start="3">
+        <li>Task1</li>
+        <li>Task2</li>
+        <li>Task3</li>
+    </ol>
+    <ol type="i">
+        <li>Task1</li>
+        <li>Task2</li>
+        <li>Task3</li>
+    </ol>
+
+
+    <!-- 13. القوائم غير المرتبة -->
+    <ul type="circle"> <!-- يمكن اضافة للدلالة على عدم وجود اشكال للعناصر type="none" -->
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <!-- 14. القوائم الوصفية -->
+    <dl>
+        <dt>Title:</dt>
+        <dd>Wep</dd>
+        <dt>Age:</dt>
+        <dd>28</dd>
+    </dl>
+
+    <!-- 15. التعامل مع الجداول -->
+    <table border="4">
+        <div>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>jop</th>
+            </tr>
+        </div>
+
+        <tr>
+            <td>abdurhman</td>
+            <td>30</td>
+            <td>manager</td>
+        </tr>
+        <tr>
+            <td>abdurhman sami</td>
+            <td>30000</td>
+            <td>manager</td>
+        </tr>
+    </table>
+
+    <!-- 16. هيكلة عناصر الجداول -->
+    <table border="4">
+        <caption> عنوان وسط اعلى الجدول</caption>
+        <thead> <!-- تعريف راس الجدول مفيدة للتحكم اكثر في الحدول -->
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>jop</th>
+            </tr>
+        </thead>
+        <tbody> <!-- تعريف جسم الجدول مفيدة للتحكم اكثر في الحدول -->
+            <tr>
+                <td>abdurhman</td>
+                <td>30</td>
+                <td>manager</td>
+            </tr>
+            <tr>
+                <td>abdurhman sami</td>
+                <td>30000</td>
+                <td>manager</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- تعريف اسفل الجدول مفيدة للتحكم اكثر في الحدول -->
+            <td colspan="3" rowspan="3"> END </td> <!-- colspan عدد الخلايا التي سيتم دمجها في هذه الخلية من الاعمدة
+        rowspan للصفوف و-->
+        </tfoot>
+    </table>
+
+    <!-- 17. الروابط الفائقة -->
+    <a target="_blank" href="https://translate.google.com/">translate google</a>
+    <br>
+    <a href="..\اساسيات تطوير الواجهات\اساسيات HTML\IMG_5563.jpg">IMG_5563.jpg</a>
+    <br>
+    <a href="#img">id img</a>
+    <br>
+
+    <!-- 19+18. التعامل مع النماذج -->
+    <form action="">
+        <label for="Name">Name</label>
+        <br>
+        <!--for="Name" تستخدم للربط بين مكان الادخال والعنوان مثلا اذا تم ضغط العنوان سينقلك لحقل الادخال او يضع صح في حال كان هذا النوع -->
+        <input type="text" id="Name" name="Name"> <!--type="text" هناك عندة انواع لزر الادخال -->
+        <br>
+        <label for="Age">Age</label>
+        <br>
+        <input type="number" id="Age" name="Age" value="20"> <!--value="20" يمكن ادخال قيمة افتراضية-->
+        <br>
+        <textarea></textarea>
+        <br>
+        <input type="submit" value="Send">
+        <br>
+        <input type="reset" value="clear">
+    </form>
+
+    <!-- 20. التعامل مع الصوت والفيديو -->
+    <audio id="Audio" controls> <!--controls تعني اضف وحدة التحكم-->
+        <source src="https://www.youtube.com/watch?v=kmUNaKjDjgY" type="audio/mpeg">
+        this is a audio
+    </audio>
+
+    <video id="video" width="640" height="480" controls> <!--المقاطع من اليوتيوب لا توضع هكذا لها طريقة اخرى-->
+        <source src="D:\التنزيلات\14.mp4" type="audio/mp4">
+        this is a audio
+    </video>
+
+    <!-- 21. العناصر التقسيمية -->
+    <!-- هكذا يتم تقسيم الصفحة وظيفة هذة الاقسام ترتيب العناصر وايضا جعل المتصفحات ومحركات البحث تتعرف عليها  -->
+
+    <head></head>
+    <nav></nav>
+    <article> <!--يمثل محتوى الصفحة-->
+        <section></section>
+        <aside></aside>
+    </article>
+    <footer></footer>
+
+
+</html>
+</body>

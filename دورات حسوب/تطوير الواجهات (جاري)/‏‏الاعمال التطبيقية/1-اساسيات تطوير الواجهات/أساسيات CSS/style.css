@@ -1,0 +1,238 @@
+
+
+@font-face{ /* طريقة انشاء خط جديد ---------------------------------- */
+    font-family: cairo-b; /* ضع اي اسم عادي  */
+    src : url(./font/Cairo-Bold.ttf);
+}
+p#cairo{
+    font-family: cairo-b;
+    color: #ff1c1c;
+}
+
+/* طرق لصناعة قواعد التنسيق ---------------------------------------------------*/
+/* باسم العنصر فيطبق على كل هذا العنصر  */
+h2,h3,h6{
+    
+    color: chartreuse;
+}
+
+/* by CLASS */
+.h3-1{
+    background-color: black;
+}
+/* or */
+h3.h3-1{
+    background-color: black;
+}
+
+/* by ID */
+#h4-1{
+    background-color: blue;
+}
+/* or */
+h4#h4-1{
+    background-color: blue;
+}
+
+/* عنصر داخل عنصر */
+div > h1 {
+    color: blueviolet;
+}
+
+div > tr > th {
+    color: rgb(255, 217, 0);
+}
+
+/* خاصية معينة داخل عنصر */
+
+label[for="Age"] {
+    color: rgb(255, 0, 149);
+}
+
+/* طرق تحديد الالوان ---------------------------------------------------*/
+h5{
+    color: chartreuse; /* باسم اللون*/
+    color: rgb(127, 255, 0); /* rgb*/
+    color: rgba(127, 255, 0, 0.2) ; /* هنا اخر رقم يدل على شفافية اللون*/
+    color: #7fff00; /* بالنظام الستعشري*/
+    color: hwb(90 0% 0%); /* hwb*/
+    color: hsl(90, 100%, 50%); /* hsl*/
+}
+
+/* 05. التعامل مع الخطوط---------------------------------------------------*/
+body{
+    font-size: 13pt; /*يمكن استخدام عدة انواع من المقاسات مثل البكسل*/
+    font-family: Arial, Helvetica, sans-serif; /*اول خط اذا لم يعثر عليه سياخذ الخيار الذي بعده وهكذا*/
+    font-weight:900 ; /*السمك*/
+    font-style: italic ; /*بعض التنسيقات*/
+    font-variant:small-caps ; /*بعض التنسيقات الاخرى ايضا*/
+}
+
+/* 06. التعامل مع النصوص---------------------------------------------------*/
+body{
+    text-decoration:underline; /*تنسيقات للنص */
+    text-align:left; /*مكان النص في الصفحة */
+    text-transform:capitalize ; /*حاله الاحرف كيبر صغير الخ*/
+    text-shadow: -2pt 2pt 5pt rgb(157, 157, 157); /*الظل اول رقم يمين يسار , الرقم الثاني فوق تحت , الرقم الثالث كثافة الظل , اخيرا لون الظل*/
+    text-indent:0cm ; /*الازاحة يمكن استخدام اكثر من نوع من القسايات هنا ب سم*/
+    direction:ltr ; /*النص يبدا من اليمين لليسار او العكس*/
+}
+
+/* 07. التعامل مع الخلفية---------------------------------------------------*/
+.background{
+    background-color:burlywood; /*لون الخلفية */
+    background-position:center; /*مكان الخلفية اعتقد اذا كانت صورة*/
+    background-repeat:no-repeat; /*منع تكرار صورة الخلفية*/
+    background-repeat:repeat-x; /* تكرار صورة الخلفية على محور معين*/
+    background-repeat:repeat; /* تكرار صورة في كل المحاور*/
+    background-image: url(./3059.jpg); /*الخلفية صورة */
+    height:500px; /*الارتفاع */
+    width:500px; /*العرض */
+}
+
+/*08. الروابط والأصناف الزائفة--------------------------------------------------*/
+/*هناك اربع حالات للروابط بمكن التحكم بكل منها كالتالي*/
+/* الترتيب الموصى به هو link، visited ، hover active 
+يجب أن يأتي link و visited  أولاً بشكل عام. يجب أن يكون التالي hover بحيث سينطبق على كل من الروابط التي تمت زيارتها والتي لم تتم زيارتها و يجب أن تأتي active دائمًا في المرتبة الأخيرة */
+/*الرابط العادي*/
+a:link{
+    color: black;
+}
+/*الرابط عندما يكون قد ضغط عليه سابقا*/
+a:visited{
+    color: rgb(255, 242, 0);
+}
+/*الرابط عند وضع الماوس عليه*/
+a:hover{
+    color: rgb(0, 208, 255);
+}
+/*الرابط عند الضغط عليه*/
+a:active{
+    color: rgb(255, 0, 0);
+}
+
+/* 10. الهوامش والحواشي--------------------------------------------------*/
+.MarginAndPadding{
+    background-color:rgb(255, 0, 162);
+    height: 300px;;
+    width: 300px;;
+    margin:10px; /*الهوامش الخارجية من جميع الحهات*/
+    margin-top:10px; /*الهوامش الخارجية من الاعلى وهكذا يمكن تحديد الجهه*/
+    padding:10px; /*الهوامش الداخلية او الحواشي من جميع الحهات*/
+    padding-top:10px; /*الهوامش الداخلية او الحواشي من الاعلى وهكذا يمكن تحديد الجهه*/
+}
+
+/* 11. التعامل مع القوائم-------------------------------------------------*/
+ol{
+    list-style-type:armenian;
+}
+ul{
+    list-style-type:upper-alpha;
+}
+ol{ /*قائمة بصورة*/
+    margin-left: 25px;
+    list-style-image: url(whatsapp.png);
+}
+
+/*طريقة للتحكم في حجم الصورة في القائمة حيث انه لا مكن بشكل طبيعي التحكم فيها فهذه طريقة ملتويه*/
+li {
+	margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-image: url(whatsapp.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+}
+
+/* 12. التعامل مع الجداول------------------------------------------------*/
+
+table td,th{ 
+    border: 1px solid #000000; /*حدود الجدول*/
+    padding: 25px; 
+}
+table{
+
+    border-collapse: collapse;   /*لازاله الفراغات بين الحدود*/
+}
+th{ 
+    background-color: #940042;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* 13. التعامل مع النماذج-----------------------------------------------*/
+form{
+    background-color: rgb(237, 237, 237);
+    border: 1px solid #9c9c9c;
+    border-radius: 10px; /*انحناء الاطراف*/
+    width: 250px;
+    height: 290px;
+    margin: 10px;
+    line-height: 20px;
+    padding: 10px;
+}
+label{
+    color: #545454;
+}
+input[type="text"], input[type="number"],textarea{
+    border: 1px solid #9c9c9c;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+input[type="submit"], input[type="reset"]{
+    border: 1px solid #9c9c9c;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/*14. تحديد المواضع----------------------------------------------*/
+.class{ 
+    background-color: rgb(204, 188, 255);
+    border: 1px solid #9c9c9c;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    display: inline-block; /*لا تنزل سطر لاسفل*/
+}
+.class:last-child{ /*اي خذ اخر عنصر ينتمي لهذا الكلاس*/
+    position: relative; /*نفذ التنسيقات باعتبار اقرب عنصر له وليس من الصفحة مثل التباعد الخ*/
+    position:fixed; /*العنصر ثابت*/
+    position:absolute; /*نفذ التنسيقات من حدود الصفحة*/
+    top: 20px;
+}
+
+/*15. تخطيط Flex Box--------------------------------------------*/
+.flex{ 
+    background-color: rgb(204, 188, 255);
+    border: 1px solid #9c9c9c;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+}
+#flex{ 
+    display:flex; /*يعرض العناصر بشكل متجاوب ومرن*/
+    /* flex-wrap: wrap; */ /*نفس السابق لكن ليس مرن*/
+    /* flex-direction: column; */ /*يجعل العناصر اسفل بعض*/
+}
+
+/*16. طرق العرض Display modes-------------------------------------------*/
+.flex{ 
+    display: none; /*اخفاء العنصر*/
+    display: inline; /*جعل العناصر في سطر واحد واهتمال التغييرات في المقاسات*/
+    display: inline-block; /*جعل العناصر في سطر واحد وعدم اهمال التغييرات في المقاسات*/
+}
+/*تنبيه يجب مراعاه حجم العنصر + مكانه فلو كان في الاسفل لن تظهر العتاصر التي قبله بجانبه + لو كان هناك عنصر لم يتم تطبيف عليه هذا الامر قد يؤثر على العناصر التي بعده*/
+nav{ 
+    float: left; /*لجعل العنصر يطهر في الجانب من الصفحة وتحديد الدانب الايسر او الايمن*/
+    width: 200px;
+    height: 300px;
+}
+#b-float{ 
+    clear: both; /*لمسح تاثير الفلوت على الجانبين او تحديد مسح تاثير الجانب الايسر او الايمن*/
+}
