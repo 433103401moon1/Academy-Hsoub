@@ -23,8 +23,3 @@ let value_x = x.innerHTML = '<b style="color:green;">this is x </b>' + '<b style
 let div = document.getElementById("div");
 div.appendChild(x);
 document.write(value_x);
-
-function changeStyle(){
-    let bon2 = document.getElementById("bon2");
-    bon2.style.backgroundColor = 'green'
-}

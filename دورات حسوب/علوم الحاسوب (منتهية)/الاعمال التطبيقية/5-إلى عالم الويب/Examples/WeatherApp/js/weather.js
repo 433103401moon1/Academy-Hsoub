@@ -13,11 +13,15 @@ function getWeather(){
             dataType: "json",
             success: function(data){
                 $("#showWeather").html(showResults(data));
-                $("#city").val('');
-            }          
+                // $("#city").val('');
+            }, error: function () { 
+                $("#error")
+                .html("<div class='alert alert-danger' id='errorCity'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>المدينة غير موجودة أو غير صحيحة</div>");
+            }  
         });   
     }else{
-        $("#error").html("<div class='alert alert-danger' id='errorCity'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>الرجاء إدخال اسم مدينة صحيح</div>");
+        $("#error")
+        .html("<div class='alert alert-danger' id='errorCity'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>الرجاء إدخال اسم مدينة صحيح</div>");
     }   
 }
 
