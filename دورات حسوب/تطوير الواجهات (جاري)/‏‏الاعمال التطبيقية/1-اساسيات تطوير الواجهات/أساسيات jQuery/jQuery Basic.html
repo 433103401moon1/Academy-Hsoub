@@ -1,0 +1,226 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> First WeP Page </title>
+    <!-- اضافة jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- اضافة 11. التحقق من المدخلات Input Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+    <style>
+        .redcolor{
+            color: red;
+        }
+        .background{
+            background-color: rgb(251, 255, 0);
+        }
+        .text{
+            text-decoration:underline;
+            color: blue;
+        }
+        body{
+            height: 1000px;
+        }
+    </style>
+    <script>
+        // يمكن اختصار هذه الجمله التي تعني امر جيكويري احضر المستند وانتطر تحميل الصفحةjQuery(document).ready
+
+        $(function() {
+            $('#a').text("google")
+                .attr('href', 'http://google.com');
+        // اضف صنف لاحد العناصر بحث يطبق على اخر واحد من نفس العنصر
+            $('h1:last').addClass('redcolor');
+        // الوصول لاحد العناصر من خلال خاصية بداخله مع وضع شرط اذا كانت لا تساوي هذه القيمة + تغيير قيمته
+        // $('input[name!=age]').addClass('redcolor')
+        //     .val('done');
+        // الوصول لاحد العناصر من خلال الابن + تغيير التنسيق
+        $('#child').parent().css('color', 'green');
+        // الوصول لكل العناصر الابناء من خلال الاب  
+        $('#div1').children();
+        // الوصول لاحد العناصر الابناء من خلال الاب 
+        $('#div1').children('p').addClass('background');
+
+        // 06. التحكم في عناصر الصفحة باستعمال DOM
+        // اضافة عنصر بعد عنصر
+        $('#div1').after('<a href="https://bing.com">bing-after</a>');
+        // اضافة عنصر قبل عنصر
+        $('#div1').before('<a id="before" href="https://bing.com">bing-before</a>');
+        // حذف عنصر 
+        $('#before').remove();
+        // اضافة عنصر داخل عنصر ويكون مكانه في الاخير
+        $('#div1').append('<a href="https://bing.com">bing-append</a>');
+        // اضافة عنصر داخل عنصر ويكون مكانه في الاول
+        $('#div1').prepend('<a href="https://bing.com">bing-prepend</a>');
+        // 07. التعامل مع الأحداث
+        // يمكن استخدام عدة احداث هنا مثال على حدث الضغط
+        $('#h1-2').click(function () {
+            $(this).addClass('text'); // يمكن استخدام this للدلاله على العنصر الحالي
+        });
+        // 08. التعامل مع النماذج Forms
+        $('#selectAll').click(function () {
+            $('input:checkbox').attr('checked', 'checked');
+            $(this).attr('disabled', 'disabled');
+            });
+        $('#deleteAll').click(function () {
+            $('input:checkbox').removeAttr('checked');
+            });
+            // $('input:checkbox').change(function () {
+            // $('#selectAll').removeAttr('disabled');
+            // });
+        
+        // 09. التعامل مع المتصفح Browser
+        // يمكن أن تحصل على طول الصفحة من خلال الكود التالي والذي يستخدم بعد ذلك كقيمة للخاصية scrollTop:
+        // $(document).height()
+        // بالنسبة للـreturn فنحن نستعملها داخل click handler ونرد false ، هكذا يفهم المتصفح أننا لا نريده أن يقوم بما يفعله عادةً عند الضغط على الرابط الذي هو الذهاب لمكان ذلك الرابط، نحن لا نريد للمتصفح أن يذهب لمكان الرابط عند الضغط عليه بل أن يذهب ﻷعلى أو ﻷسفل لذلك نرد false.
+        $('#a-goBottom').click(function () {
+            $('html, body').animate({ scrollTop : $(document).height() }, 1200);
+            return false;
+        });
+        $('#a-goTop').click(function () {
+            $('html, body').animate({ scrollTop : 0 }, 600);
+            return false;
+        });
+        // اخفاء القائمة التي تظهر عند الغضط بالماوس الايمن
+        // $(document).contextmenu( function () {
+        //     return false;
+        // });
+        // 10. التعامل مع التأثيرات Effects
+        // اظهار عنصر
+        $('#show').click( function () {
+            $('#div-show').show(500);
+        });
+        // اخفاء عنصر
+        $('#hide').click( function () {
+            $('#div-show').hide(500);
+        });
+        // اظهار واخفاء عنصر معا
+        $('#toggle').click( function () {
+            $('#div-show').toggle(500);
+        });
+        // اظهار واخفاء عنصر معا بشكل راسي
+        $('#slideToggle').click( function () {
+            $('#div-show').slideToggle(500);
+        });
+        
+        // 11. التحقق من المدخلات Input Validation
+        $('#form-validation').validate({
+            rules: {
+                name: {
+                    required : true
+                },
+                email: {
+                    required : true,
+                    email: true
+                },
+                age: {
+                    required: true
+                }
+
+            }
+        });
+    
+        // 12. التعامل مع أجاكس Ajax
+        $("#ajax").click(function(){
+            $.ajax({
+                url:'https://jsonplaceholder.typicode.com/todos',
+                type:'GET',
+                dataType:'json',
+                success: 
+                function(data,status){
+                    console.log(status);
+                    $('#table-ajax').append(
+                        `<tr>
+                        <th>${data[0]}</th>
+
+                        </tr>`
+                        )
+                    for(let i in data){
+                        $('#table-ajax').append(
+                        `<tr>
+                        <td>${data[i].userId}</td>
+                        <td>${data[i].id}</td>
+                        <td>${data[i].title}</td>
+                        <td>${data[i].completed}</td>
+                        </tr>`
+                        )
+                    }
+                },
+                error: 
+                function(resualt,status,error){
+                    console.log('cannot load data');
+                },
+                complete: 
+                function(resualt,status){
+                    console.log('loading completed');
+                }
+            });
+        });
+    });
+    </script>
+    
+
+</head>
+
+<body>
+    <button id="ajax">load</button> <br><br>
+
+    <table border="1" id="table-ajax">
+        <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>completed</th>
+        </tr>
+    </table><br>
+
+    <a id="a-goBottom" href="#">a-goBottom</a> <br>
+    <a id="a"></a>
+    <h1 >first1</h1>
+    <h1 id="h1-2">second2</h1>
+
+    <form id="form-validation">
+        <label for="age">Enter your age:</label>
+        <input type="number" name="age" id="age"><br>
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="email">email:</label>
+        <input type="text" name="email" id="email"><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+        <input type="button" value="Click here">
+    </form>
+    <div id="div1">
+        <p id="child">p</p>
+        <h2>h2</h2>
+        <h2>h2</h2>
+    </div>
+
+    <hr>
+    <input type="checkbox" id="HTML">
+    <label for="HTML">HTML</label> <br>
+    <input type="checkbox" id="CSS">
+    <label for="CSS">CSS</label> <br>
+    <input type="checkbox" id="JS">
+    <label for="JS">JS</label> <br>
+    
+    <select name="select" id="select" style="width: 150px;">
+        <option value="level-1">level-1</option>
+        <option value="level-2">level-2</option>
+        <option value="level-3">level-3</option>
+    </select> <br> <br>
+    <input type="button" id="selectAll" value="Select All">
+    <input type="button" id="deleteAll" value="Delete All">
+    <hr>
+    <a id="a-goTop" href="#">a-goTop</a>
+    <hr>
+    <div id="div-show" style="height: 200px; width: 200px; background-color: blueviolet;"></div>
+    <br>
+    <input type="button" id="show" value="show">
+    <input type="button" id="hide" value="hide">
+    <input type="button" id="toggle" value="toggle">
+    <input type="button" id="slideToggle" value="slideToggle">
+    
+    
+    <script src="jQuery Basic.js"></script>
+</body>
+</html>

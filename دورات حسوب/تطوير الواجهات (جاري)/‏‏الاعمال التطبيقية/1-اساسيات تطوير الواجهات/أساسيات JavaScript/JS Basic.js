@@ -28,3 +28,21 @@ function changeStyle(){
     let bon2 = document.getElementById("bon2");
     bon2.style.backgroundColor = 'green'
 }
+
+// الاستماع للاحداث التي تحصل على العناصر
+let h12 = document.getElementById("h1-event");
+h12.addEventListener("click", function() {
+    h12.style.backgroundColor = 'green';
+    h12.style.color = 'white';
+    h12.innerHTML = 'hi';
+});
+
+// 17. التحقق من صحة البيانات Data Validation
+
+function validate(){
+    let name = document.getElementById("Name").value
+    let age = document.getElementById("Age").value
+    let check = document.getElementById("Check").checked
+
+    return check && !isNaN(age) && age != '' && name != ''
+}

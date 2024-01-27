@@ -38,9 +38,57 @@ HTML -->
         <!--مثال على حدث وضع المؤشر-->
         <input type="text" id="bon2" onfocus="changeStyle();"></input>
 
-        <!--الطريقة2 لوضع جافاسكربت في الصفحة-->
+    <h1 id="h1-event">hello</h1>
+    
+
+    <!-- 17. التحقق من صحة البيانات Data Validation -->
+    <form onsubmit=" return validate();"> <!-- اذا ضغط على زر ارسال ارحع قيمة هذه الداله في حال النتيحة صح رسال النموذج والعكس لا ترسله-->
+        <table>
+            <tr>
+                <td>
+                    <label for="Name">Name:</label> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="Name" name="Name"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Age">Age:</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" id="Age" name="Age" > 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="Check" name="Check"> 
+                    <label for="Check">هل توافق على الشروط والاحكام</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Send">
+                </td>
+                <td>
+                    <input type="reset" value="clear">
+                </td>
+            </tr>
+    
+        </table>
+    </form>
+
+    <!--الطريقة2 لوضع جافاسكربت في الصفحة-->
         <script src="JS Basic.js"></script>
-
-
 </body>
 </html>
