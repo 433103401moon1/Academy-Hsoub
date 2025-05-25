@@ -1,0 +1,40 @@
+@media (max-width: 1115px) {
+    #top-menu #icon-search {
+        display: inline;
+    }
+
+    #top-menu #search-box {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    #top-menu .nav-item:not(:last-child) {
+        display: none;
+    }
+
+    #top-menu ul {
+        margin: 0 auto 0 0 !important;
+    }
+
+    #filter-items.active {
+        max-height: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    #filter-items.active {
+        max-height: 950px;
+    }
+
+    #channel-page .card-body {
+        padding: 12px 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #channel-page .nav-link {
+        font-size: 13px;
+        margin: 0 5px !important;
+    }
+}

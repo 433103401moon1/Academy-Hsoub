@@ -1,0 +1,338 @@
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+}
+
+:root {
+    --font-family-Cairo-SemiBold: "Cairo-SemiBold";
+}
+
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+    box-shadow: unset !important;
+}
+
+body {
+    font-family: var(--font-family-Cairo-SemiBold);
+}
+
+/* #header */
+#header {
+    z-index: 100;
+}
+
+#header button.navbar-toggler {
+    color: #fff;
+    border: 3px solid transparent;
+}
+
+#header button.navbar-toggler:focus {
+    border: 3px solid #fff;
+}
+
+#header .nav-link {
+    color: #fff;
+    background-color: unset;
+    transition: all 0.3s ease-in-out;
+}
+
+#header .nav-link:hover {
+    color: #0575e6;
+    background-color: #fff;
+}
+
+#header a.active {
+    color: #0575e6;
+    background-color: #fff;
+}
+
+#header.scrolled .nav-link {
+    background-color: unset;
+    color: #0575e6;
+}
+
+#header.scrolled a.active,
+#header.scrolled .nav-link:hover {
+    background-color: #0575e6;
+    color: #fff;
+}
+
+/* about-me */
+#about-me {
+    background-image: url(../images/bg-1.jpg);
+    background-position: center;
+    height: 600px;
+}
+
+#about-me .container {
+    background-color: rgba(5, 117, 230, 0.9);
+    top: 60px;
+    z-index: 1;
+}
+
+#about-me img {
+    border-color: #73ade7 !important;
+}
+
+#about-me .social i {
+    color: rgb(2, 27, 121);
+}
+
+#about-me .description {
+    color: #89c4ff;
+}
+
+/* certificates */
+#certificates {
+    padding: 200px 0 50px 0;
+    color: #196dd1;
+    background-color: #e0ecf6;
+}
+
+#certificates .line {
+    width: 100px;
+    height: 2px;
+    background-color: #196dd1;
+}
+
+#certificates .line::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 2px;
+    height: 500px;
+    background-color: #196dd1;
+    top: 0;
+    right: 49px;
+}
+
+#certificates .certificat-card-start::before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    border: 15px solid #fff;
+    ;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    top: 17px;
+    left: -27px;
+}
+
+#certificates .certificat-card-start::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #196dd1;
+    border-radius: 50%;
+    top: 26px;
+    left: -33px;
+    z-index: 1;
+}
+
+#certificates .certificat-card-end::before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    border: 15px solid #fff;
+    ;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    top: 17px;
+    right: -27px;
+
+}
+
+#certificates .certificat-card-end::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #196dd1;
+    border-radius: 50%;
+    top: 26px;
+    right: -33px;
+    z-index: 1;
+}
+
+#certificates .date {
+    background-color: #196dd1;
+}
+
+#certificates .text-body {
+    color: #acacac !important;
+    font-size: 14px;
+}
+
+/* #skills */
+#skills {
+    background-image: url(../images/bg-2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#skills .overlay {
+    background-color: rgba(5, 117, 230, 0.7);
+}
+
+#skills .counter {
+    color: #0575e6;
+}
+
+#skills .circle canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* previous-works */
+#previous-works {
+    color: #196dd1;
+}
+
+#previous-works .projecte {
+    transition: all 0.5s ease-in-out;
+}
+
+#previous-works .projecte.filtered {
+    scale: 0.8;
+    opacity: 0.5;
+}
+
+#previous-works .projecte.remaining {
+    scale: 1.1;
+}
+
+#previous-works button.btn-outline-secondary {
+    width: fit-content !important;
+    color: #acacac;
+}
+
+#previous-works button.btn-outline-secondary:hover,
+#previous-works button.active {
+    border-color: #0575e6 !important;
+    color: #fff;
+    background-color: #0575e6;
+}
+
+/* #footer */
+#footer {
+    background-image: url(../images/bg-3.jpg);
+    background-position: center;
+}
+
+#footer .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* said-about-me */
+#said-about-me {
+    padding: 0 10%;
+}
+
+#said-about-me img {
+    top: 0px;
+    z-index: 10;
+    transform: translateX(50%);
+}
+
+#said-about-me .carousel-inner {
+    margin: 70px 0 !important;
+}
+
+#said-about-me .description {
+    font-size: 14px;
+    color: #acacac;
+}
+
+#said-about-me button.carousel-control-next,
+#said-about-me button.carousel-control-prev {
+    width: 50px;
+    height: 50px;
+    background-color: #196dd1;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    top: 42%;
+}
+
+#said-about-me button.carousel-control-next {
+    left: 35px;
+}
+
+#said-about-me button.carousel-control-prev {
+    right: 35px;
+}
+
+#said-about-me .social i {
+    color: #196dd1;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+#said-about-me .social i:hover {
+    color: #196dd1;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#said-about-me button.carousel-control-next:hover,
+#said-about-me button.carousel-control-prev:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+#said-about-me .carousel-indicators {
+    bottom: 40px;
+}
+
+#said-about-me .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-color: #196dd1 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+#said-about-me .carousel-indicators button.active {
+    background-color: #196dd1;
+}
+
+/* contact-me */
+#contact-me h3 {
+    color: #196dd1;
+}
+
+#contact-me #social-media i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #196dd1;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact-me #social-media i:hover {
+    color: #fff;
+    background-color: #196dd1;
+}
+
+#contact-me .btn-outline-primary {
+    border-color: #196dd1;
+    color: #196dd1;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact-me .btn-outline-primary:hover {
+    background-color: #196dd1;
+    color: #fff;
+}
+
+#contact-me input,
+#contact-me textarea {
+    border-color: #196dd1;
+}

@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+}
+
+:root {
+    --font-family-Cairo-SemiBold: "Cairo-SemiBold";
+}
+
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+    box-shadow: unset !important;
+}
+
+#header .card-title,
+h2 {
+    color: #555;
+}
+
+body {
+    font-family: var(--font-family-Cairo-SemiBold);
+}
+
+/* #header */
+#header .overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+
+}
+
+#header video {
+    object-fit: cover;
+    z-index: -2;
+}
+
+#header .card {
+    background-color: unset;
+}
+
+#header .card-title {
+    color: #555;
+}
+
+#header .card-text {
+    text-align: justify;
+}
+
+#header .card img.product-img {
+    width: 100%;
+    height: 100%;
+}
+
+#header .card img.product-lable {
+    width: 30%;
+    top: -30px;
+    right: -30px;
+    max-width: 200px;
+    min-width: 120px;
+}
+
+#header .card .product-lable-text {
+    width: 30%;
+    top: -10px;
+    right: -30px;
+    max-width: 200px;
+    min-width: 120px;
+    z-index: 1;
+}
+
+#header .btn-outline-primary {
+    border-color: rgb(129, 77, 178);
+    color: rgb(129, 77, 178);
+}
+
+#header .btn-outline-primary:hover {
+    color: #fff;
+    background-color: rgb(129, 77, 178);
+}
+
+/* #features */
+#features .line {
+    height: 1.5px;
+    width: 150px;
+    background-color: rgb(129, 77, 178);
+}
+
+#features .card-title {
+    color: rgb(129, 77, 178);
+    border-color: rgb(129, 77, 178) !important;
+}
+
+#features .card-text {
+    text-align: justify;
+}
+
+#features .card img {
+    width: 260px;
+    height: 339px;
+}
+
+/* price-plans */
+#price-plans {
+    background-color: #f7f7f7;
+}
+
+#price-plans .lable-plan {
+    color: rgb(235, 221, 19);
+}
+
+#price-plans .card,
+#price-plans .btn-outline-primary {
+    border-color: rgb(129, 77, 178);
+    color: rgb(129, 77, 178);
+}
+
+#price-plans .btn-outline-primary:hover {
+    color: #fff;
+    background-color: rgb(129, 77, 178);
+}
+
+/* FAQ */
+#FAQ .accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: rgb(129, 77, 178);
+}
+
+#FAQ .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* video-show */
+#video-show {
+    height: 100vh;
+}
+
+#video-show .overlay {
+    background-color: rgba(129, 77, 178, 0.758);
+}
+
+#video-show video {
+    object-fit: cover;
+}
+
+#video-show #video-play {
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+#video-show #video-play:hover {
+    border-color: hsla(0, 0%, 11%, 0.7) !important;
+    color: hsla(0, 0%, 11%, 0.7) !important;
+}
+
+#video-show #video-play i {
+    transition: border-color 0.3s ease-in-out;
+}
+
+#video-show #video-play:hover i {
+    border-color: hsla(0, 0%, 11%, 0.7) !important;
+}
+
+/* #contact-us */
+#contact-us {
+    background-color: #131313;
+}
+
+#contact-us .btn-primary {
+    background-color: rgb(129, 77, 178);
+}
+
+#contact-us .card {
+    background-color: unset;
+}
+
+#contact-us .card img {
+    width: 91px;
+    height: 91px;
+}
+
+#contact-us .card .card-title {
+    color: #aeadad !important;
+}
+
+#contact-us .card .card-text {
+    font-size: 14px;
+    color: #737373 !important;
+}
+
+/* #footer */
+#footer #social-media a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    color: #1d1d1d;
+    background-color: #758594;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer #social-media a:hover {
+    background-color: rgb(129, 77, 178);
+}

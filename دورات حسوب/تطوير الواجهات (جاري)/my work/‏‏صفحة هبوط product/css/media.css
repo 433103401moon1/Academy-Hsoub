@@ -1,0 +1,32 @@
+@media (max-width: 991.5px) {
+    #header .card-body{
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* header */
+    #header .card-body{
+        padding: 0 !important;
+    }
+    /* features */
+    #features .card img {
+        margin: 0 auto !important;
+    }
+    #features .card .card-body {
+        margin: 0 auto !important;
+    }
+    #features .card .card-title {
+        border: unset !important;
+        margin-top: 15px;
+        text-align: center;
+    }
+    #features .card .card-text {
+        text-align-last: center;
+    }
+    /* footer */
+    #footer #social-media,
+    #footer p {
+        justify-content: center !important;
+    }
+}

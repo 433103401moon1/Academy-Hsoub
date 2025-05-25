@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+}
+
+:root {
+    --font-family-Cairo-SemiBold: "Cairo-SemiBold";
+}
+
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+    box-shadow: unset !important;
+}
+
+h2 {
+    color: #555;
+}
+
+body {
+    font-family: var(--font-family-Cairo-SemiBold);
+}
+
+/* #header */
+#header {
+    z-index: 100;
+}
+
+#header button.navbar-toggler {
+    color: #fff;
+    border: 3px solid transparent;
+}
+
+#header button.navbar-toggler:focus {
+    border: 3px solid #fff;
+}
+
+#header .nav-link {
+    color: #fff;
+    background-color: unset;
+    transition: all 0.3s ease-in-out;
+}
+
+#header .nav-link:hover {
+    color: #16aeca;
+    background-color: #fff;
+}
+
+#header a.active {
+    color: #16aeca;
+    background-color: #fff;
+}
+
+#header.scrolled .nav-link {
+    background-color: unset;
+    color: #16aeca;
+}
+
+#header.scrolled a.active,
+#header.scrolled .nav-link:hover {
+    background-color: #16aeca;
+    color: #ffd700;
+}
+
+/* carousel */
+#carousel {
+    height: 100vh;
+}
+
+#carousel .overlay {
+    background: linear-gradient(to right, rgba(46, 178, 181, 0.8), rgba(197, 203, 50, 0.8))
+}
+
+#carousel img {
+    object-fit: cover;
+}
+
+#carousel #carouselAutoplaying {
+    cursor: pointer;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+#carousel .carousel-inner {
+    padding: 0 10%;
+    margin: 60px 0 0 0 !important;
+}
+
+#carousel .btn-primary {
+    border: none;
+    background-color: #16aeca;
+
+}
+
+#carousel .btn-primary:hover {
+    color: #171717 !important;
+    background-color: #dae413;
+}
+
+/* #company-services */
+#company-services .card-text {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#company-services img {
+    width: 140px;
+    height: 140px;
+}
+
+#company-services .card-text {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 14px;
+}
+
+/* our-business */
+#our-business #our-business-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 0;
+    height: 0;
+    top: 50%;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 101;
+}
+
+#our-business #our-business-overlay i.close {
+    cursor: pointer;
+    top: 30px;
+    left: 50px;
+}
+
+#our-business #our-business-overlay .card {
+    background-color: unset
+}
+
+#our-business #our-business-overlay .card .card-title {
+    color: #16aeca;
+}
+
+#our-business #our-business-overlay .card .btn-primary {
+    border: none;
+    background-color: #16aeca;
+}
+
+#our-business #our-business-overlay .card .btn-primary:hover {
+    color: #171717 !important;
+    background-color: #dae413;
+}
+
+#our-business a {
+    cursor: pointer;
+}
+
+#our-business a div.position-absolute {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background-color: hsla(189, 80%, 44%, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+#our-business a i {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#our-business a:hover i {
+    opacity: 1;
+}
+
+#our-business a:hover div.position-absolute {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#our-business img {
+    object-fit: cover;
+}
+
+/* #statistics */
+#statistics {
+    background-image: url(../images/bg-2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#statistics .overlay {
+    background-color: hsla(189, 80%, 44%, 0.5);
+}
+
+/* #contact-us */
+#contact-us .btn-primary {
+    background-color: #16aeca;
+}
+
+#contact-us .card {
+    background-color: unset;
+}
+
+#contact-us .card img {
+    width: 91px;
+    height: 91px;
+}
+
+#contact-us .card .card-title {
+    color: #aeadad !important;
+}
+
+#contact-us .card .card-text {
+    font-size: 14px;
+    color: #737373 !important;
+}
+
+#contact-us iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* footer */
+#footer {
+    background-color: #111111;
+}
+
+#footer .container-fulid {
+    background-color: #171717;
+}
+
+#footer .title {
+    color: #16aeca !important;
+}
+
+#footer #social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer #social-media a:hover {
+    color: #fff !important;
+    background-color: #16aeca !important;
+}

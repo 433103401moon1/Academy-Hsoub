@@ -1,0 +1,68 @@
+@media screen and (max-width: 991px) {
+
+    // global class
+    .article-title {
+        font-size: 16px !important;
+    }
+
+    .article-body {
+        display: none !important;
+    }
+
+    // single-article
+    .single-article {
+        .single-article-most-read {
+            display: none;
+        }
+
+        .article-title {
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    // global class
+    .article-title {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .article-body {
+        display: none;
+    }
+
+    // most-read
+    .most-read {
+        .article-title {
+            font-size: 20px;
+        }
+    }
+
+    // most-read
+    .latest-news {
+        .article-title {
+            font-size: 16px;
+        }
+    }
+
+    // single-article
+    .single-article {
+        .single-article-most-read {
+            display: none;
+        }
+
+        .article-title {
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single-article {
+        iframe {
+            height: 500px;
+        }
+    }
+}

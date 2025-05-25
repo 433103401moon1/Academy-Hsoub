@@ -1,0 +1,19 @@
+@media (max-width: 991.5px) {
+    #our-business-overlay .projecte-img {
+        max-height: 280px;
+    }
+
+    #header .navbar-collapse {
+        background-color: #fff;
+    }
+
+    #header .nav-link {
+        background-color: unset;
+        color: #16aeca;
+    }
+
+    #header .nav-link:hover {
+        background-color: #16aeca;
+        color: #ffd700;
+    }
+}

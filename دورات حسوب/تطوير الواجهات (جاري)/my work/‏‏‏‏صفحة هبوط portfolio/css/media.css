@@ -1,0 +1,56 @@
+@media (max-width: 991.5px) {
+    #header .navbar-collapse {
+        background-color: #fff;
+    }
+
+    #header .nav-link {
+        background-color: unset;
+        color: #0575e6;
+    }
+
+    #header .nav-link:hover {
+        background-color: #0575e6;
+        color: #fff;
+    }
+
+    /* certificates */
+    #certificates .row:first-child {
+        margin-bottom: 50px !important;
+    }
+
+    #certificates .certificat-card-start,
+    #certificates .certificat-card-end {
+        margin: 0 !important;
+    }
+
+    #certificates .certificat-card-start::after,
+    #certificates .certificat-card-start::before,
+    #certificates .certificat-card-end::after,
+    #certificates .certificat-card-end::before {
+        display: none;
+    }
+
+    #certificates {
+        padding: 220px 0 50px 0;
+    }
+
+    #certificates .line::before {
+        height: 650px;
+    }
+
+    /* footer */
+    #social-media div {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #certificates {
+        padding: 280px 0 50px 0;
+    }
+
+    /* said-about-me */
+    #said-about-me {
+        padding: 0;
+    }
+}

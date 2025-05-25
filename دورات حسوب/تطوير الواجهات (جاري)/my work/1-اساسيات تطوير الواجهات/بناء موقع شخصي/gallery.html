@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="موقع شخصي لعبدالرحمن سامي">
+    <meta name="author" content="عبدالرحمن سامي">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>الموقع الشخصي</title>
+</head>
+<body>
+    <main>
+        <section id="header">
+            <div id="branding" style="flex-grow: 8;">
+                <h1><a href="index.html"><i class="fa fa-user-circle"></i> موقع <span class="highlight">عبدالرحمن سامي</span></a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="current"><a href="gallery.html">معرض الأعمال</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="slider">
+            <div id="wrapper">
+                <div class="content">
+                    <img src="img/1.jpg" >
+                </div>
+                <div class="content">
+                    <img src="img/2.png" >
+                </div>
+                <div class="content">
+                    <img src="img/3.jpg" >
+                </div>
+                <div class="content">
+                    <img src="img/4.png" >
+                </div>
+                <div class="content">
+                    <img src="img/5.jpg" >
+                </div>
+            </div>
+            <div id="navLinks">
+                <ul>
+                    <li class="itemLinks" data-pos="0"></li>
+                    <li class="itemLinks" data-pos="1"></li>
+                    <li class="itemLinks" data-pos="2"></li>
+                    <li class="itemLinks" data-pos="3"></li>
+                    <li class="itemLinks" data-pos="4"></li>
+                </ul>
+            </div>
+        </section>
+        <section id="newsletter">
+            <h1 style="flex-grow: 8;">الاشتراك بالنشرة البريدية</h1>
+            <form action="">
+                <input type="email" placeholder="example@example.com" style="flex-grow: 5;">
+                <button type="submit" class="button" style="flex-grow: 5;"><b>الاشتراك</b></button>
+            </form>
+        </section>
+        <section id="boxes">
+            <div class="box" style="flex: 30%;">
+                <i class="fa fa-signal fa-5x"></i>
+                <h3>أحدث الأساليب والتقنيات</h3>
+                <p>ثقبثقبثق برثقبقثبثق ثقبرثقبثق</p>
+            </div>
+            <div class="box" style="flex: 30%;">
+                <i class="fa fa-laptop fa-5x"></i>
+                <h3>أحدث الأساليب والتقنيات</h3>
+                <p>ثقبثقبثق برثقبقثبثق ثقبرثقبثق</p>
+            </div>
+            <div class="box" style="flex: 30%;">
+                <i class="fa fa-cube fa-5x"></i>
+                <h3>أحدث الأساليب والتقنيات</h3>
+                <p>ثقبثقبثق برثقبقثبثق ثقبرثقبثق</p>
+            </div>
+        </section>
+        <section id="footer">
+            <p>موقع عبدالرحمن سامي  &copy; <span id="currentYear"></p>
+        </section>
+
+
+    </main>
+</body>
+    <!-- اضافة jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="slider.js"></script>
+</html>

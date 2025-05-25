@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <title>أخبار العالم</title>
+</head>
+
+<body dir="rtl">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">أخبار العالم</a>
+                <button class="navbar-toggler m-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-5 mb-lg-0 ms-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">أخبار</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">تكنولوجيا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اقتصاد</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">رياضة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">حاسوب</a>
+                        </li>
+                    </ul>
+                    <div class="row ms-3 mb-lg-0 mb-3">
+                        <a href="./login.html"><i class="fas fa-user-circle fa-2x mx-3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-8 col-12">
+                <div class="d-flex gap-3 mb-5">
+                    <input class="form-control me-2" type="search" placeholder="ابحث ..." aria-label="Search">
+                    <button class="btn-search">بحث</button>
+                </div>
+                <div class="d-flex gap-3 justify-content-between">
+                    <h5>أفضل 50 نتيجة</h5>
+                    <div>
+                        <div class="dropdown">
+                            <button class=" dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                رتب حسب
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">التاريخ الأحدث</a></li>
+                                <li><a class="dropdown-item" href="#">التاريخ الأقدم</a></li>
+                                <li><a class="dropdown-item" href="#">مدى الصلة</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class=" mt-3">
+                <div id="search-result">
+                    <!-- search-result -->
+                </div>
+            </div>
+            <div class="col-md-4 col-0"></div>
+        </div>
+
+        <button class="mt-5">المزيد</button>
+    </main>
+
+    <footer class="container border-top pt-5">
+        <div class="row">
+            <div class="col-lg col-sm-6 my-3">
+                <h4 class=" mb-3">من نحن</h4>
+                <ul>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">الأحكام والشروط</a></li>
+                    <li><a href="#">عن المنصة</a></li>
+                </ul>
+            </div>
+            <div class="col-lg col-sm-6 my-3">
+                <h4 class=" mb-3">تواصل معنا</h4>
+                <ul>
+                    <li><a href="#">تواصل معنا</a></li>
+                    <li><a href="#">أعلن معنا</a></li>
+                    <li><a href="#">وظائف شاغرة</a></li>
+                </ul>
+            </div>
+            <div class="col-lg col-sm-6 my-3">
+                <h4 class=" mb-3">وسائل التواصل</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt me-2"></i> الرياض</li>
+                    <li><i class="fas fa-phone-alt me-2"></i> 00966533557810</li>
+                    <li><i class="fas fa-envelope me-2"></i> info@akbar-alalm.com</li>
+                </ul>
+            </div>
+            <div class="col-lg col-sm-6 my-3">
+                <h4 class=" mb-3">تابعنا على</h4>
+                <ul class="text-center">
+                    <li class="d-flex gap-3 justify-content-evenly">
+                        <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-square fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
+                    </li>
+                    <li><a class="footer-brand" href="#">أخبار العالم</a></li>
+                    <li>جميع الحقوق محفوظة @ <span id="current-year"></span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./asset/moment/moment.min.js"></script>
+    <script src="./asset/moment/moment-with-locales.min.js"></script>
+    <script src="./asset/moment/ar.min.js"></script>
+    <script src="./asset/swiper/swiper-bundle.min.js"></script>
+    <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

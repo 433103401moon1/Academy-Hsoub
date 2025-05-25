@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+}
+
+:root {
+    --font-family-Cairo-SemiBold: "Cairo-SemiBold";
+}
+
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+    box-shadow: unset !important;
+}
+
+body {
+    font-family: var(--font-family-Cairo-SemiBold);
+}
+
+/* #header */
+#header {
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#header .overlay {
+    background-color: rgba(239, 71, 58, 0.8);
+}
+
+#header .container {
+    margin: 100px 0;
+}
+
+#header img.mobile {
+    top: 0px;
+    padding-right: 50px;
+}
+
+/* features-1 */
+#features-1 i.fas {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #ef473a;
+}
+
+#features-1 h5,
+#features-1 p {
+    text-align: justify;
+}
+
+#features-1 p {
+    font-size: 14px;
+}
+
+/* features-2 */
+#features-2 {
+    background-color: #f9f8f8;
+}
+
+/* watch-app */
+#watch-app img {
+    object-fit: cover;
+}
+
+#watch-app .carousel-inner {
+    margin: 70px 0 !important;
+}
+
+#watch-app button.carousel-control-next,
+#watch-app button.carousel-control-prev {
+    width: 70px;
+    height: 70px;
+    border-color: #ef473a !important;
+    transition: all 0.3s ease-in-out;
+    color: #ef473a;
+    top: 42%;
+}
+
+#watch-app button.carousel-control-next:hover,
+#watch-app button.carousel-control-prev:hover {
+    background-color: #ef473a;
+    color: #fff;
+}
+
+#watch-app .carousel-indicators button {
+    width: 20px;
+    height: 20px;
+    background-color: unset;
+    border-color: #ef473a !important;
+}
+
+#watch-app .carousel-indicators button.active {
+    background-color: #ef473a;
+}
+
+/* FAQ */
+#FAQ {
+    background-image: url(../images/bg-2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#FAQ .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#FAQ .accordion-item,
+.accordion-button {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: unset !important;
+}
+
+#FAQ .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* footer */
+#footer .title::before {
+    content: "";
+    position: absolute;
+    bottom: -1.5px;
+    width: 100px;
+    height: 1.5px;
+    background-color: #ef473a;
+}
+
+#footer p {
+    text-align: justify;
+}
+
+#footer #social-media a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    transition: all 0.3s ease-in-out;
+}
+
+#footer #social-media a:hover {
+    background-color: #ef473a !important;
+}
+
+#footer .twitter p {
+    font-size: 14px;
+}
+
+#footer .twitter i {
+    color: #ef473a;
+}
+
+#footer button {
+    background-color: #ef473a;
+    font-size: 14px;
+}
+
+#footer input[type="email"]::placeholder {
+    color: #737373;
+    font-size: 14px;
+}

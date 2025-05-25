@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاهدة | يوتيوبي</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="rtl">
+    <div id="watch-page">
+        <!-- side-menu -->
+        <div id="side-menu">
+            <div id="background-side-menu"></div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="/index.html"><i
+                            class="fas fa-home fa-sm mr-2"></i>الصفحة الرئيسية</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="/index.html"><i
+                            class="fab fa-algolia mr-2"></i>الفيديوهات المقترحة</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="far fa-plus-square mr-2"></i>المرفوعة حديثًا</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-fire-alt mr-2"></i>الفيديوهات الرائجة</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-fire-alt mr-2"></i>فيديوهاتي</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="/log.html"><i
+                            class="fas fa-history mr-2"></i>سجل المشاهدة</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="far fa-share-square mr-2"></i>الإشتراكات</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-film mr-2"></i>الأفلام والعروض</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-gamepad fa-sm mr-2"></i>ألعاب فيديو</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-tshirt mr-2"></i>الموضة والجمال</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-graduation-cap mr-2"></i>محتوى تعليمي</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-cog mr-2"></i>الإعدادات</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                            class="fas fa-question-circle mr-2"></i>مساعدة</a></li>
+                <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#">دورة تطوير واجهات
+                        المستخدم
+                        © 2024 أكاديمية حسوب</a></li>
+            </ul>
+        </div>
+
+        <!-- input-search-fluid -->
+        <input id="input-search-fluid" class="form-control" type="text" placeholder="ابحث عن ...">
+
+        <!-- top-menu -->
+        <div id="top-menu">
+            <div class="row p-3 m-0 bg-white fixed-top">
+                <span id="icon-side-menu" class="my-auto"><i class="fas fa-bars fa-lg"></i></span>
+                <!-- logo -->
+                <a class="navbar-brand text-body font-weight-bold" href="index.html">يوتيوبي <span
+                        class="text-white h5 rounded" style="padding: 0.25rem; background-color: #bf40bf;"><i
+                            class="fas fa-play-circle"></i></span></a>
+                <ul class="nav justify-content-center mx-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary mx-2 " href="index.html">الفيديوهات المقترحة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary mx-2" href="#">المرفوعة حديثًا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary mx-2" href="#">الفيديوهات الرائجة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="icon-search" class="nav-link mx-2" href="#"><i class="fas fa-search"></i></a>
+                    </li>
+                </ul>
+                <form id="search-box" class="form-inline">
+                    <div class="form-group mx-sm-2">
+                        <input type="text" class="form-control" id="input-search">
+                    </div>
+                    <a id="btn-search" type="submit" class="btn ml-1" href="/search.html">ابحث</a>
+                </form>
+                <a id="login-form" class="btn" data-toggle="modal" data-target="#loginModal">تسجيل
+                    الدخول</a>
+            </div>
+        </div>
+        <!-- login popup -->
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">تسجيل الدخول</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span id="close">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">البريد الإلكتروني:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-form-label">كلمة المرور:</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn px-0">نسيت كلمة المرور</a>
+                        <a class="btn mx-auto ">إنشاء حساب</a>
+                        <button id="login" type="submit" class="btn">دخول</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- video -->
+        <div class="card mb-4 px-2 border-0">
+            <div class="row no-gutters">
+                <div class="col-lg-7">
+                    <video width="100%" height="100%" controls loop muted poster="/img/poster.png">
+                        <source src="/video/hsoub.mp4" type="video/mp4">
+                        <source src="/video/hsoub.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="col-lg-5 pl-3">
+                    <div class="card-body py-2 px-4 mb-4 ">
+                        <div class="card-details">
+                            <span class="m-0 p-0">
+                                <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                            </span>
+                            <span class="m-0 p-0">
+                                <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                            </span>
+                            <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                    class="rounded my-2 ml-3">
+                                أكاديمية
+                                حسوب</a>
+                        </div>
+                        <a class="card-title text-dark h4" href="/watch.html">دورة تطوير واجهات المستخدم - أكاديمية حسوب
+                        </a>
+                        <p class="card-text">
+                            تم إعداد هذه الدورة على يد نخبة من أفضل المبرمجين العرب بتسلسل بسيط وواضح، بإنهائك لها ستصبح
+                            مطوّر واجهات مستخدم دون الحاجة لامتلاك معرفة سابقة بالبرمجة، خلال هذه ستتعلم تطوير واجهات
+                            المستخدم خطوة بخطوة اعتمادًا على التجربة العملية والمادة العلمية التي يقدمها مدربون محترفون
+                        </p>
+                        <button class="btn show-more mb-5">عرض المزيد</button>
+                        <button class="btn d-none show-more mb-5">عرض عناصر أقل</button>
+                        <div class="watch-icons">
+                            <a href=""><i class="far fa-heart bg-secondary text-white p-1 rounded-circle mr-1"
+                                    title="أحببته"></i></a>
+                            <a href=""><i class="far fa-clock bg-secondary text-white p-1 rounded-circle mr-1"
+                                    title="المشاهدة لاحقًا"></i></a>
+                            <a href=""><i class="far fa-share-square bg-secondary text-white p-1 rounded-circle mr-1"
+                                    title="مشاركة"></i></a>
+                            <a href=""><i class="far fa-play-circle bg-secondary text-white p-1 rounded-circle mr-1"
+                                    title="إضافة إلى قائمة التشغيل"></i></a>
+                            <span class="ml-4">إبلاغ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-2">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row justify-content-between mb-4 px-3">
+                        <span class="align-self-center">التعليقات 4</span>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown">
+                                الترتيب بحسب
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">التاريخ</a>
+                                <a class="dropdown-item" href="#">التعليقات الأجدد</a>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea class="form-control" rows="3" placeholder="إضافة تعليق عام"></textarea>
+                    <button class="btn btn-comment mb-4 mt-4">تعليق</button>
+                    <!-- comments -->
+                    <div id="comments" class="col p-0">
+                        <!-- comment -->
+                        <div class="card mb-4 py-2 px-3">
+                            <div class="row no-gutters">
+                                <div class="col-2 align-self-center">
+                                    <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;" alt="...">
+                                    <div class="text-center">منذ 20 دقيقة</div>
+                                </div>
+                                <div class="card-body col-10 pl-4">
+                                    <div class="row justify-content-end m-0">
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </div>
+                                    <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                        عبدالله رامز
+                                    </a>
+                                    <p class="card-text mb-5">
+                                        مرحبًا، شكرًا لكم على هذه الدورة الرائعة </p>
+                                    <div class="card-details">
+                                        <button class="sub-comments btn btn-primary mr-1" href="#"><i
+                                                class="fa fa-reply"></i>
+                                            الردود</button>
+                                        <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                            أعجبني</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-comment card d-none mb-4 py-2 px-3 ml-5">
+                                <div class="row no-gutters">
+                                    <div class="col-2 align-self-center">
+                                        <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;"
+                                            alt="...">
+                                        <div class="text-center">منذ 40 دقيقة</div>
+                                    </div>
+                                    <div class="card-body col-10 pl-4">
+                                        <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                            محمد أحمد
+                                        </a>
+                                        <p class="card-text mb-5">
+                                            فعلا رائعة </p>
+                                        <div class="card-details">
+                                            <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                                أعجبني</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- comment -->
+                        <div class="card mb-4 py-2 px-3">
+                            <div class="row no-gutters">
+                                <div class="col-2 align-self-center">
+                                    <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;" alt="...">
+                                    <div class="text-center">منذ يوم</div>
+                                </div>
+                                <div class="card-body col-10 pl-4">
+                                    <div class="row justify-content-end m-0">
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </div>
+                                    <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                        محمد أحمد
+                                    </a>
+                                    <p class="card-text mb-5">
+                                        لقد تحسن مستواك كثيرا شكرا </p>
+                                    <div class="card-details">
+                                        <button class="sub-comments btn btn-primary mr-1" href="#"><i
+                                                class="fa fa-reply"></i>
+                                            الردود</button>
+                                        <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                            أعجبني</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-comment card d-none mb-4 py-2 px-3 ml-5">
+                                <div class="row no-gutters">
+                                    <div class="col-2 align-self-center">
+                                        <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;"
+                                            alt="...">
+                                        <div class="text-center">يومين</div>
+                                    </div>
+                                    <div class="card-body col-10 pl-4">
+                                        <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                            نورة هاشم
+                                        </a>
+                                        <p class="card-text mb-5">
+                                            وأنا كذلك </p>
+                                        <div class="card-details">
+                                            <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                                أعجبني</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- comment -->
+                        <div class="card mb-4 py-2 px-3">
+                            <div class="row no-gutters">
+                                <div class="col-2 align-self-center">
+                                    <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;" alt="...">
+                                    <div class="text-center">منذ 3 أيام</div>
+                                </div>
+                                <div class="card-body col-10 pl-4">
+                                    <div class="row justify-content-end m-0">
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </div>
+                                    <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                        محمد عبدالرحمن
+                                    </a>
+                                    <p class="card-text mb-5">
+                                        هل ستكون هناك دورات اخرى قريبا </p>
+                                    <div class="card-details">
+                                        <button class="sub-comments btn btn-primary mr-1" href="#"><i
+                                                class="fa fa-reply"></i>
+                                            الردود</button>
+                                        <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                            أعجبني</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-comment card d-none mb-4 py-2 px-3 ml-5">
+                                <div class="row no-gutters">
+                                    <div class="col-2 align-self-center">
+                                        <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;"
+                                            alt="...">
+                                        <div class="text-center">منذ 5 أيام</div>
+                                    </div>
+                                    <div class="card-body col-10 pl-4">
+                                        <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                            رامي سعيد
+                                        </a>
+                                        <p class="card-text mb-5">
+                                            اعتقد انهم سيوفرونها قريبا </p>
+                                        <div class="card-details">
+                                            <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                                أعجبني</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- comment -->
+                        <div class="card mb-4 py-2 px-3">
+                            <div class="row no-gutters">
+                                <div class="col-2 align-self-center">
+                                    <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;" alt="...">
+                                    <div class="text-center">منذ أسبوع</div>
+                                </div>
+                                <div class="card-body col-10 pl-4">
+                                    <div class="row justify-content-end m-0">
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                    </div>
+                                    <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                        مها ماهر
+                                    </a>
+                                    <p class="card-text mb-5">
+                                        ارجو تحسين الصوت مستقبلا </p>
+                                    <div class="card-details">
+                                        <button class="sub-comments btn btn-primary mr-1" href="#"><i
+                                                class="fa fa-reply"></i>
+                                            الردود</button>
+                                        <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                            أعجبني</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-comment card d-none mb-4 py-2 px-3 ml-5">
+                                <div class="row no-gutters">
+                                    <div class="col-2 align-self-center">
+                                        <img src="img/avatar.png" class="card-img-top" style="object-fit: cover;"
+                                            alt="...">
+                                        <div class="text-center">منذ شهر</div>
+                                    </div>
+                                    <div class="card-body col-10 pl-4">
+                                        <a class="card-title text-dark font-weight-bold m-0" href="#">
+                                            فهد حسام
+                                        </a>
+                                        <p class="card-text mb-5">
+                                            اعتقد ان المشكله لديك لان الصوت جيد </p>
+                                        <div class="card-details">
+                                            <button class="btn btn-primary" href="#"><i class="fa fa-heart"></i>
+                                                أعجبني</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row px-3">
+                        <span>الاقتراحات</span>
+                    </div>
+                    <div id="videos" class="col p-0 pt-4">
+                        <div class="card mb-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                    <a class="img-vedio" href="/watch.html">
+                                        <img src="img/thumbnail/devtools.jpg" class="card-img-top p-1"
+                                            style="height: 100%; object-fit: cover;" alt="...">
+                                        <i class="fas fa-play fa-2x"></i>
+                                        <span class="time px-1 m-1">9:20</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 pl-3">
+                                    <div class="card-body py-2 px-1">
+                                        <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم
+                                            كيف تبني
+                                            واجهات
+                                            REST برمجية</a>
+                                        <div class="card-details">
+                                            <span class="m-0 p-0">
+                                                <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف
+                                                    مشاهدة</small>
+                                            </span>
+                                        </div>
+                                        <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                                class="rounded my-2">
+                                            أكاديمية
+                                            حسوب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                    <a class="img-vedio" href="/watch.html">
+                                        <img src="img/thumbnail/database.jpg" class="card-img-top p-1"
+                                            style="height: 100%; object-fit: cover;" alt="...">
+                                        <i class="fas fa-play fa-2x"></i>
+                                        <span class="time px-1 m-1">20:10</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 pl-3">
+                                    <div class="card-body py-2 px-1">
+                                        <a class="card-title text-dark h5" href="/watch.html">شرح لغة استعلام قواعد البيانات SQL بالأمثلة العملية</a>
+                                        <div class="card-details">
+                                            <span class="m-0 p-0">
+                                                <small class="text-muted"><i class="fas fa-film"></i> 6 آلاف
+                                                    مشاهدة</small>
+                                            </span>
+                                        </div>
+                                        <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                                class="rounded my-2">
+                                            أكاديمية
+                                            حسوب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                    <a class="img-vedio" href="/watch.html">
+                                        <img src="img/thumbnail/khamsat1.png" class="card-img-top p-1"
+                                            style="height: 100%; object-fit: cover;" alt="...">
+                                        <i class="fas fa-play fa-2x"></i>
+                                        <span class="time px-1 m-1">15:43</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 pl-3">
+                                    <div class="card-body py-2 px-1">
+                                        <a class="card-title text-dark h5" href="/watch.html">تعلم كيف تقدم مهاراتك على موقع خمسات</a>
+                                        <div class="card-details">
+                                            <span class="m-0 p-0">
+                                                <small class="text-muted"><i class="fas fa-film"></i> 866
+                                                    مشاهدة</small>
+                                            </span>
+                                        </div>
+                                        <a href="channel.html" class="card-link text-dark"><img src="/img/khamsat.jpg"
+                                                class="rounded my-2">
+                                            خمسات</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                    <a class="img-vedio" href="/watch.html">
+                                        <img src="img/thumbnail/mostaql.png" class="card-img-top p-1"
+                                            style="height: 100%; object-fit: cover;" alt="...">
+                                        <i class="fas fa-play fa-2x"></i>
+                                        <span class="time px-1 m-1">7:20</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 pl-3">
+                                    <div class="card-body py-2 px-1">
+                                        <a class="card-title text-dark h5" href="/watch.html">وظف أفضل المستقلين الموجودين في الوطن العربي - مستقل</a>
+                                        <div class="card-details">
+                                            <span class="m-0 p-0">
+                                                <small class="text-muted"><i class="fas fa-film"></i> 200
+                                                    مشاهدة</small>
+                                            </span>
+                                        </div>
+                                        <a href="channel.html" class="card-link text-dark"><img src="/img/mostaql.png"
+                                                class="rounded my-2">
+                                            مستقل</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="row no-gutters">
+                                <div class="col-md-5">
+                                    <a class="img-vedio" href="/watch.html">
+                                        <img src="img/thumbnail/php.jpg" class="card-img-top p-1"
+                                            style="height: 100%; object-fit: cover;" alt="...">
+                                        <i class="fas fa-play fa-2x"></i>
+                                        <span class="time px-1 m-1">12:00</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-7 pl-3">
+                                    <div class="card-body py-2 px-1">
+                                        <a class="card-title text-dark h5" href="/watch.html">دورة تطوير تطبيقات الويب باستخدام لغة PHP - أكاديمية حسوب</a>
+                                        <div class="card-details">
+                                            <span class="m-0 p-0">
+                                                <small class="text-muted"><i class="fas fa-film"></i> 1 آلاف
+                                                    مشاهدة</small>
+                                            </span>
+                                        </div>
+                                        <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                                class="rounded my-2">
+                                            أكاديمية
+                                            حسوب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

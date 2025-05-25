@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السجل | يوتيوبي</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="rtl">
+    <!-- side-menu -->
+    <div id="side-menu">
+        <div id="background-side-menu"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="/index.html"><i
+                        class="fas fa-home fa-sm mr-2"></i>الصفحة الرئيسية</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="/index.html"><i
+                        class="fab fa-algolia mr-2"></i>الفيديوهات المقترحة</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="far fa-plus-square mr-2"></i>المرفوعة حديثًا</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-fire-alt mr-2"></i>الفيديوهات الرائجة</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-fire-alt mr-2"></i>فيديوهاتي</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="/log.html"><i
+                        class="fas fa-history mr-2"></i>سجل المشاهدة</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="far fa-share-square mr-2"></i>الإشتراكات</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-film mr-2"></i>الأفلام والعروض</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-gamepad fa-sm mr-2"></i>ألعاب فيديو</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-tshirt mr-2"></i>الموضة والجمال</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-graduation-cap mr-2"></i>محتوى تعليمي</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-cog mr-2"></i>الإعدادات</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#"><i
+                        class="fas fa-question-circle mr-2"></i>مساعدة</a></li>
+            <li class="list-group-item p-0"><a class="nav-link text-secondary py-3" href="#">دورة تطوير واجهات المستخدم
+                    © 2024 أكاديمية حسوب</a></li>
+        </ul>
+    </div>
+
+    <!-- input-search-fluid -->
+    <input id="input-search-fluid" class="form-control" type="text" placeholder="ابحث عن ...">
+
+    <!-- top-menu -->
+    <div id="top-menu">
+        <div class="row p-3 m-0 bg-white fixed-top">
+            <span id="icon-side-menu" class="my-auto"><i class="fas fa-bars fa-lg"></i></span>
+            <!-- logo -->
+            <a class="navbar-brand text-body font-weight-bold" href="index.html">يوتيوبي <span
+                    class="text-white h5 rounded" style="padding: 0.25rem; background-color: #bf40bf;"><i
+                        class="fas fa-play-circle"></i></span></a>
+            <ul class="nav justify-content-center mx-auto ">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary mx-2 " href="index.html">الفيديوهات المقترحة</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary mx-2" href="#">المرفوعة حديثًا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary mx-2" href="#">الفيديوهات الرائجة</a>
+                </li>
+                <li class="nav-item">
+                    <a id="icon-search" class="nav-link mx-2" href="#"><i class="fas fa-search"></i></a>
+                </li>
+            </ul>
+            <form id="search-box" class="form-inline">
+                <div class="form-group mx-sm-2">
+                    <input type="text" class="form-control" id="input-search">
+                </div>
+                <a id="btn-search" type="submit" class="btn ml-1" href="/search.html">ابحث</a>
+            </form>
+            <a id="login-form" class="btn" data-toggle="modal" data-target="#loginModal">تسجيل
+                الدخول</a>
+        </div>
+    </div>
+    <!-- login popup -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">تسجيل الدخول</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span id="close">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">البريد الإلكتروني:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">كلمة المرور:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn px-0">نسيت كلمة المرور</a>
+                    <a class="btn mx-auto ">إنشاء حساب</a>
+                    <button id="login" type="submit" class="btn">دخول</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 mb-4" style="background-color: #fff">
+                <div class="list-group list-group-flush p-0">
+                    <input class="form-control list-group-item my-4 pb-4" type="text" placeholder="ابحث في التاريخ">
+                    <div class="mb-2">نوع السجل:</div>
+                    <a class="list-group-item list-group-item-action active" data-toggle="list">سجل المشاهدة</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list">سجل البحث</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list">التعليقات</a>
+                    <a class="list-group-item list-group-item-action" style="border-bottom-width: 0.8px"
+                        data-toggle="list">المنتدى</a>
+                </div>
+                <div class="list-group list-group-flush p-0">
+                    <div class="mt-4 mb-2">التاريخ:</div>
+                    <a class="list-group-item list-group-item-action active" data-toggle="list">منذ 24 ساعة</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list">منذ 3 أيام</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list">منذ أسبوع</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list">منذ شهر</a>
+                </div>
+            </div>
+            <div id="videos" class="col ml-2">
+                <div class="card mb-3 mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <i class="fas fa-times fa-sm video-remove m-1"></i>
+                            <a class="img-vedio" href="/watch.html">
+                                <img src="img/thumbnail/devtools.jpg" class="card-img-top p-1"
+                                    style="height: 100%; object-fit: cover;" alt="...">
+                                <i class="fas fa-play fa-2x"></i>
+                                <span class="time px-1 m-1">9:20</span>
+                            </a>
+                        </div>
+                        <div class="col-md-7 pl-3">
+                            <div class="card-body py-2 px-1">
+                                <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم كيف تبني
+                                    واجهات
+                                    REST برمجية</a>
+                                <p class="card-text">
+                                    ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات،
+                                    عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                </p>
+                                <div class="card-details">
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                                    </span>
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                                    </span>
+                                    <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                            class="rounded my-2 ml-3">
+                                        أكاديمية
+                                        حسوب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <i class="fas fa-times fa-sm video-remove m-1"></i>
+                            <a class="img-vedio" href="/watch.html">
+                                <img src="img/thumbnail/database.jpg" class="card-img-top p-1"
+                                    style="height: 100%; object-fit: cover;" alt="...">
+                                <i class="fas fa-play fa-2x"></i>
+                                <span class="time px-1 m-1">9:20</span>
+                            </a>
+                        </div>
+                        <div class="col-md-7 pl-3">
+                            <div class="card-body py-2 px-1">
+                                <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم كيف تبني
+                                    واجهات
+                                    REST برمجية</a>
+                                <p class="card-text">
+                                    ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات،
+                                    عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                </p>
+                                <div class="card-details">
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                                    </span>
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                                    </span>
+                                    <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                            class="rounded my-2 ml-3">
+                                        أكاديمية
+                                        حسوب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <i class="fas fa-times fa-sm video-remove m-1"></i>
+                            <a class="img-vedio" href="/watch.html">
+                                <img src="img/thumbnail/devtools.jpg" class="card-img-top p-1"
+                                    style="height: 100%; object-fit: cover;" alt="...">
+                                <i class="fas fa-play fa-2x"></i>
+                                <span class="time px-1 m-1">9:20</span>
+                            </a>
+                        </div>
+                        <div class="col-md-7 pl-3">
+                            <div class="card-body py-2 px-1">
+                                <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم كيف تبني
+                                    واجهات
+                                    REST برمجية</a>
+                                <p class="card-text">
+                                    ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات،
+                                    عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                </p>
+                                <div class="card-details">
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                                    </span>
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                                    </span>
+                                    <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                            class="rounded my-2 ml-3">
+                                        أكاديمية
+                                        حسوب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <i class="fas fa-times fa-sm video-remove m-1"></i>
+                            <a class="img-vedio" href="/watch.html">
+                                <img src="img/thumbnail/database.jpg" class="card-img-top p-1"
+                                    style="height: 100%; object-fit: cover;" alt="...">
+                                <i class="fas fa-play fa-2x"></i>
+                                <span class="time px-1 m-1">9:20</span>
+                            </a>
+                        </div>
+                        <div class="col-md-7 pl-3">
+                            <div class="card-body py-2 px-1">
+                                <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم كيف تبني
+                                    واجهات
+                                    REST برمجية</a>
+                                <p class="card-text">
+                                    ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات،
+                                    عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                </p>
+                                <div class="card-details">
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                                    </span>
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                                    </span>
+                                    <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                            class="rounded my-2 ml-3">
+                                        أكاديمية
+                                        حسوب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <i class="fas fa-times fa-sm video-remove m-1"></i>
+                            <a class="img-vedio" href="/watch.html">
+                                <img src="img/thumbnail/devtools.jpg" class="card-img-top p-1"
+                                    style="height: 100%; object-fit: cover;" alt="...">
+                                <i class="fas fa-play fa-2x"></i>
+                                <span class="time px-1 m-1">9:20</span>
+                            </a>
+                        </div>
+                        <div class="col-md-7 pl-3">
+                            <div class="card-body py-2 px-1">
+                                <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم كيف تبني
+                                    واجهات
+                                    REST برمجية</a>
+                                <p class="card-text">
+                                    ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات،
+                                    عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                </p>
+                                <div class="card-details">
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                                    </span>
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                                    </span>
+                                    <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                            class="rounded my-2 ml-3">
+                                        أكاديمية
+                                        حسوب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <i class="fas fa-times fa-sm video-remove m-1"></i>
+                            <a class="img-vedio" href="/watch.html">
+                                <img src="img/thumbnail/database.jpg" class="card-img-top p-1"
+                                    style="height: 100%; object-fit: cover;" alt="...">
+                                <i class="fas fa-play fa-2x"></i>
+                                <span class="time px-1 m-1">9:20</span>
+                            </a>
+                        </div>
+                        <div class="col-md-7 pl-3">
+                            <div class="card-body py-2 px-1">
+                                <a class="card-title text-dark h5" href="/watch.html">شرح فلسفة RESTful - تعلم كيف تبني
+                                    واجهات
+                                    REST برمجية</a>
+                                <p class="card-text">
+                                    ستتعلم في هذا الدرس كيفية ربح مبالغ كبيرة من خلال تقديم مهاراتك على موقع خمسات،
+                                    عند مشاهدتك لهذا المقطع واتباعك الخطوات بشكل جيد سيصل ربحك إلى 100$ يوميًا
+                                </p>
+                                <div class="card-details">
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-film"></i> 3 آلاف مشاهدة</small>
+                                    </span>
+                                    <span class="m-0 p-0">
+                                        <small class="text-muted"><i class="fas fa-clock"></i> قبل 5 أشهر</small>
+                                    </span>
+                                    <a href="channel.html" class="card-link text-dark"><img src="/img/ch-logo.png"
+                                            class="rounded my-2 ml-3">
+                                        أكاديمية
+                                        حسوب</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

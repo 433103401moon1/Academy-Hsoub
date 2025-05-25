@@ -1,0 +1,12 @@
+@use "sass:color";
+
+$color-warning: #f8ad47;
+$color-gray-lightest: #f5f5f5; // رصاصي فاتح جداً
+$color-gray-lighter: #dcdcdc; // رصاصي فاتح
+$color-gray-default: #a9a9a9; // رصاصي متوسط
+$color-gray-darker: #696969; // رصاصي غامق
+$color-gray-darkest: #2f2f2f; // رصاصي غامق جداً
+$color-primary: #53ccd7;
+$color-danger: #ff3956;
+$btn-warning-color-light: color.adjust($color-warning, $lightness: 50%);
+$btn-danger-color-light: color.adjust($color-danger, $lightness: 35%);

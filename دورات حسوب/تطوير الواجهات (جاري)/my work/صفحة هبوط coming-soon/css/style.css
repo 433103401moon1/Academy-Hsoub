@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+}
+
+:root {
+    --font-family-Cairo-SemiBold: "Cairo-SemiBold";
+}
+
+button:focus,
+input:focus,
+a:focus {
+    box-shadow: unset !important;
+}
+
+body {
+    font-family: var(--font-family-Cairo-SemiBold);
+}
+
+/* #header */
+#header {
+    padding-top: 100px !important;
+    background-image: url(../images/header.jpg);
+    background-position: center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+}
+
+#header #logo {
+    border-bottom-color: #464b52 !important;
+}
+
+#header h1 {
+    line-height: 75px;
+}
+
+#header #counter {
+    max-width: 600px;
+    margin: auto;
+}
+
+#header #counter .col {
+    width: fit-content;
+}
+
+#header #counter .time {
+    font-size: 60px;
+    color: #ffce00;
+}
+
+#header #counter .lable {
+    font-size: 30px;
+}
+
+#header .needs-validation button {
+    background-color: #ffce00;
+}
+
+/* #features */
+#features .card {
+    right: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#features .card:dir(rtl):hover {
+    right: 5px;
+}
+
+#features .card:dir(ltr):hover {
+    right: -5px;
+}
+
+#features .card img {
+    width: 100px;
+    height: 100px;
+}
+
+/* #footer */
+#footer {
+    background-image: url(../images/footer-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+#footer .needs-validation button {
+    background-color: #393939
+}
+
+#footer div.container-fulid:nth-child(1) {
+    background-color: rgba(255, 206, 0, 0.7);
+    padding: 70px 0;
+}
+
+#footer div.container-fulid:nth-child(2) {
+    background-color: rgba(57, 57, 57, 0.9);
+    padding: 100px 0 20px 0;
+}
+
+#footer #social-media a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 80px;
+    margin: 0 12px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.14);
+    transition: all 0.3s ease-in-out;
+}
+
+#footer #social-media a:hover {
+    color: #464b52;
+    background-color: rgba(255, 206, 0, 0.7);
+}
+
+#footer #line {
+    width: 340px;
+    height: 1px;
+}
+
+#footer #email i{
+    color: #ffce00;
+}

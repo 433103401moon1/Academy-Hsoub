@@ -38,6 +38,25 @@ class registered_lessons(Model):
     studentID = IntegerField()
     lessoneID = IntegerField()
 # functiones ----------------------------------------------------------------------------------
+def clear_excess_spaces(arr):
+    count = 0
+    for i in arr:
+        item =''
+        char = -1
+        for j in i:
+            char += 1
+            # test
+            # print(f'char={char}, len(i)={len(i)}, arr={arr}') 
+            if len(i) == char+1 and j == ' ' :
+                continue
+            if j == ' ' and item =='':
+                continue
+            if j == ' ' and item !='' and i[char+1] == ' ':
+                continue
+            item += j
+        arr[count] = item
+        count += 1
+    return arr
 def input_data(type_data, message):
     while True:
         try:
@@ -54,12 +73,11 @@ def input_data(type_data, message):
                 if len(data) < 20 and data.isalpha():
                     return data.lower()
             elif type_data == 'text':
-                if len(data) < 50 :
+                if len(data) < 70 :
                     return data
         except ValueError: 
             pass
         print('Data is invalid')
-
 def create_student():
     print("Enter the new student’s information:")
     
@@ -82,6 +100,7 @@ def create_student():
         
         # Adding new lessons + lessons in which the student is registered
         lessons_arr = student_lessons.split('-')
+        lessons_arr = clear_excess_spaces(lessons_arr) # clear bad spaces
         for item in lessons_arr:
             if lesson.get('name', item) == None:
                 lesson.create(name=item)
@@ -93,7 +112,6 @@ def create_student():
         print('\nThe operation was completed successfully')
     else:
         print('\nIt was rejected or the data entered is incorrect')
-
 def show_student():
     student_ID = input_data('id', 'Enter student ID: ')
     student_info = student.get('studentID', student_ID)
@@ -110,7 +128,6 @@ def show_student():
             record = lesson.get('lessonID', item['lessonID'])
             count += 1
             print(count, '- ', record['name'])
-
 def delete_student():
     student_ID = input_data('id', 'Enter student ID: ')
     student_info = student.get('studentID', student_ID)
@@ -125,7 +142,6 @@ def delete_student():
             print('\nThe operation was completed successfully')
         else:
             print('\nIt was rejected')
-
 def update_student():
     student_ID = input_data('id', 'Enter student ID: ')
     student_info = student.get('studentID', student_ID)
@@ -153,6 +169,7 @@ def update_student():
 
             # Adding new lessons + lessons in which the student is registered
             lessons_arr = student_lessons.split('-')
+            lessons_arr = clear_excess_spaces(lessons_arr) # clear bad spaces
             for item in lessons_arr:
                 if lesson.get('name', item) == None:
                     lesson.create(name=item)
